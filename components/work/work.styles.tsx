@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Constant, Color, spaced, TitleFont } from '../../styles';
+import { Color, spaced, TitleFont } from '../../styles';
 
 export const Root: any = styled.section({
   height: '100%',
