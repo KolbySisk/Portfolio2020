@@ -11,5 +11,11 @@ https://kolbysisk.com
 
 ## Running dev server
 
-`npm i`
-`npm run dev`
+- `npm i`
+- `npm run dev`
+
+## Topics to write about
+
+- Setting up a Next project: file structure, styled components, configs
+- Styling system
+- Optimizing images
