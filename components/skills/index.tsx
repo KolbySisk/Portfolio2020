@@ -7,7 +7,7 @@ const Skills = ({ skills }: Props) => {
       <h2>Skills</h2>
       <SkillsStyles.Skills>
         {skills?.map((skill: Skill) => (
-          <SkillsStyles.Skill fillPercent={skill.expertise}>
+          <SkillsStyles.Skill key={skill.title} fillPercent={skill.expertise}>
             <SkillsStyles.SkillTitle>{skill.title}</SkillsStyles.SkillTitle>
           </SkillsStyles.Skill>
         ))}

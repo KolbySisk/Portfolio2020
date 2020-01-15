@@ -4,3 +4,4 @@ export * from './reset';
 export * from './typography';
 export * from './constant';
 export * from './utility';
+export * from './responsive';

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Gradient, spaced } from '../../styles';
+import { Gradient, spaced, MediaQuery, BreakPoint } from '../../styles';
 
 const bgImage = require('../../public/images/trees.png?webp');
 
@@ -15,6 +15,9 @@ export const IntroContainer: any = styled.section([
     backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat',
   },
+  MediaQuery(BreakPoint.medium, {
+    flexDirection: 'column',
+  }),
 ]);
 
 export const Logo: any = styled.div({
@@ -29,8 +32,16 @@ export const LogoText: any = styled.div({
   lineHeight: 0,
 });
 
-export const Intro: any = styled.p({
-  width: '60%',
-  fontSize: '18px',
-  lineHeight: '27px',
-});
+export const Intro: any = styled.p([
+  {
+    width: '60%',
+    fontSize: '18px',
+    lineHeight: '27px',
+  },
+  MediaQuery(BreakPoint.medium, {
+    width: '100%',
+    fontSize: 24,
+    //fontWeight: 900,
+    lineHeight: '32px',
+  }),
+]);
