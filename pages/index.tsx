@@ -5,6 +5,7 @@ import Data from '../data';
 import Introduction from '../components/introduction';
 import Skills from '../components/skills';
 import Work from '../components/work';
+import Contact from '../components/contact';
 
 import { BreakPoint, MediaQuery } from '../styles/responsive';
 
@@ -23,6 +24,8 @@ const Home = () => (
         <Work work={Data.work} tags={Data.tags} />
       </WorkColumn>
     </Columns>
+
+    <Contact />
   </>
 );
 
@@ -43,6 +46,7 @@ export const IntroColumn = styled.div((props: any) => [
     maxWidth: '710px',
     display: 'flex',
     flexDirection: 'column',
+    overflow: 'auto',
   },
   MediaQuery(BreakPoint.medium, {
     width: '100%',

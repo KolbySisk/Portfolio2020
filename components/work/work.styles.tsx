@@ -25,7 +25,7 @@ export const Works: any = styled.div({
   overflow: 'auto',
 });
 
-export const Work: any = styled.a([
+export const Work: any = styled.a((props: any) => [
   TitleFont,
   {
     width: '100%',
@@ -35,10 +35,6 @@ export const Work: any = styled.a([
     display: 'flex',
     alignItems: 'center',
     padding: `0 ${spaced(4)}px`,
-    ':nth-of-type(1n)': { backgroundColor: Color.blue },
-    ':nth-of-type(2n)': { backgroundColor: Color.purp },
-    ':nth-of-type(3n)': { backgroundColor: Color.red },
-    ':nth-of-type(4n)': { backgroundColor: Color.green },
-    ':nth-of-type(5n)': { backgroundColor: Color.black },
+    backgroundColor: props.color,
   },
 ]);

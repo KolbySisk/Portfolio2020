@@ -38,4 +38,8 @@ export const ResetStyles = css({
     textDecoration: 'none',
     color: 'inherit',
   },
+  input: {
+    border: 'none',
+    outline: 'none',
+  },
 });
