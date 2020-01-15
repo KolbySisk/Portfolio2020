@@ -10,14 +10,16 @@ const Work = ({ work, tags }: Props) => {
 
         <WorkStyles.Tags>
           {tags.map((tag: string) => (
-            <Tag tag={tag} />
+            <Tag key={tag} tag={tag} />
           ))}
         </WorkStyles.Tags>
       </WorkStyles.Header>
 
       <WorkStyles.Works>
         {work.map((work: any) => (
-          <WorkStyles.Work>{work.title}</WorkStyles.Work>
+          <WorkStyles.Work key={work.slug} href={`/work/${work.slug}`}>
+            {work.title}
+          </WorkStyles.Work>
         ))}
       </WorkStyles.Works>
     </WorkStyles.Root>

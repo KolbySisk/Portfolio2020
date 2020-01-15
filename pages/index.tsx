@@ -8,6 +8,24 @@ import Work from '../components/work';
 
 import { BreakPoint, MediaQuery } from '../styles/responsive';
 
+const Home = () => (
+  <>
+    <Head>
+      <title>Kolby Sisk - Software engineer</title>
+    </Head>
+
+    <Columns>
+      <IntroColumn>
+        <Introduction intro={Data.intro} />
+        <Skills skills={Data.skills} />
+      </IntroColumn>
+      <WorkColumn>
+        <Work work={Data.work} tags={Data.tags} />
+      </WorkColumn>
+    </Columns>
+  </>
+);
+
 export const Columns = styled.div([
   {
     display: 'flex',
@@ -16,19 +34,6 @@ export const Columns = styled.div([
   MediaQuery(BreakPoint.medium, {
     flexDirection: 'column',
     height: 'auto',
-  }),
-]);
-
-export const Column = styled.div((props: any) => [
-  {
-    width: props.width ? props.width : 'auto',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    overflow: 'auto',
-  },
-  MediaQuery(BreakPoint.medium, {
-    width: '100%',
   }),
 ]);
 
@@ -45,22 +50,10 @@ export const IntroColumn = styled.div((props: any) => [
   }),
 ]);
 
-const Home = () => (
-  <>
-    <Head>
-      <title>Kolby Sisk - Software engineer</title>
-    </Head>
-
-    <Columns>
-      <IntroColumn>
-        <Introduction intro={Data.intro} />
-        <Skills skills={Data.skills} />
-      </IntroColumn>
-      <Column style={{ flex: '1' }}>
-        <Work work={Data.work} tags={Data.tags} />
-      </Column>
-    </Columns>
-  </>
-);
+export const WorkColumn = styled.div((props: any) => [
+  {
+    flex: 1,
+  },
+]);
 
 export default Home;

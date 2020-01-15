@@ -6,4 +6,5 @@ export const Tag: any = styled.button({
   borderRadius: Constant.borderRadius,
   fontSize: 12,
   padding: '4px 16px',
+  color: Color.black,
 });

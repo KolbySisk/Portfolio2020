@@ -36,5 +36,6 @@ export const ResetStyles = css({
     border: 'none',
     lineHeight: 'normal',
     textDecoration: 'none',
+    color: 'inherit',
   },
 });

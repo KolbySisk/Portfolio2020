@@ -34,7 +34,7 @@ export const Work: any = styled.a([
     lineHeight: '40px',
     display: 'flex',
     alignItems: 'center',
-    paddingLeft: spaced(4),
+    padding: `0 ${spaced(4)}px`,
     ':nth-of-type(1n)': { backgroundColor: Color.blue },
     ':nth-of-type(2n)': { backgroundColor: Color.purp },
     ':nth-of-type(3n)': { backgroundColor: Color.red },
