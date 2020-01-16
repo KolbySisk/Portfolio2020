@@ -32,7 +32,7 @@ export const Work: any = styled.a((props: any) => [
   TitleFont,
   {
     width: '100%',
-    height: spaced(26),
+    height: spaced(22),
     fontSize: '36px',
     lineHeight: '40px',
     display: 'flex',

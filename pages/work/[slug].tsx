@@ -8,6 +8,7 @@ const WorkPage = ({ work }) => {
       <Head>
         <title>Kolby Sisk - Software engineer</title>
       </Head>
+      <h1>Work</h1>
     </>
   );
 };

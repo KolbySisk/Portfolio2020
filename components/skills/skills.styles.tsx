@@ -14,6 +14,9 @@ export const Skills: any = styled.div({
 export const Skill: any = styled.div((props: any) => [
   {
     width: '100%',
+    height: spaced(3.5),
+    display: 'flex',
+    alignItems: 'center',
     backgroundColor: Color.white,
     borderRadius: Constant.borderRadius,
     marginBottom: spaced(1.5),
