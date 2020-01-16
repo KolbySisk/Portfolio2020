@@ -7,9 +7,11 @@ export const Root: any = styled.section({
   padding: `0 ${spaced(4)}px ${spaced(4)}px`,
 });
 
-export const Skills: any = styled.div({
-  paddingTop: spaced(4),
+export const Title: any = styled.h2({
+  marginBottom: spaced(2),
 });
+
+export const Skills: any = styled.div({});
 
 export const Skill: any = styled.div((props: any) => [
   {
@@ -30,5 +32,4 @@ export const SkillTitle: any = styled.h3({
   fontWeight: 600,
   fontSize: 13,
   paddingLeft: spaced(1),
-  zIndex: 5,
 });

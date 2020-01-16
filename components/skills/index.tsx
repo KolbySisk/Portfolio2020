@@ -4,7 +4,7 @@ import { Skill } from '../../data';
 const Skills = ({ skills }: Props) => {
   return (
     <SkillsStyles.Root>
-      <h2>Skills</h2>
+      <SkillsStyles.Title>Skills</SkillsStyles.Title>
       <SkillsStyles.Skills>
         {skills?.map((skill: Skill) => (
           <SkillsStyles.Skill key={skill.title} fillPercent={skill.expertise}>
