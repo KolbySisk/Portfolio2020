@@ -41,7 +41,6 @@ export const Intro: any = styled.p([
   MediaQuery(BreakPoint.medium, {
     width: '100%',
     fontSize: 24,
-    //fontWeight: 900,
     lineHeight: '32px',
   }),
 ]);

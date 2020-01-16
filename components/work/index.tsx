@@ -1,9 +1,11 @@
 import * as WorkStyles from './work.styles';
 import { useState } from 'react';
 import Tag from '../tag';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Work = ({ work, tags }: Props) => {
   const [selectedTag, setSelectedTag] = useState();
+  const [scrolled, setScrolled] = useState(false);
 
   const getWorkByTag = () => {
     if (!selectedTag) return work;
@@ -29,13 +31,18 @@ const Work = ({ work, tags }: Props) => {
         </WorkStyles.Tags>
       </WorkStyles.Header>
 
-      <WorkStyles.Works>
+      <WorkStyles.Works onScroll={() => setScrolled(true)}>
         {getWorkByTag().map((work: any) => (
           <WorkStyles.Work color={work.color} key={work.slug} href={`/work/${work.slug}`}>
             {work.title}
           </WorkStyles.Work>
         ))}
       </WorkStyles.Works>
+      {!scrolled && (
+        <WorkStyles.ScrollHint>
+          <FaChevronDown />
+        </WorkStyles.ScrollHint>
+      )}
     </WorkStyles.Root>
   );
 };

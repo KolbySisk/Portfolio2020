@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Color, spaced, Constant } from '../../styles';
+import { Color, spaced, Constant, MediaQuery, BreakPoint } from '../../styles';
 
 export const Root: any = styled.section({});
 
@@ -21,7 +21,7 @@ export const ToggleButton: any = styled.button({
 
 export const Form: any = styled.form((props: any) => [
   {
-    position: 'absolute',
+    position: 'fixed',
     top: props.open ? '50%' : '-5%',
     left: '50%',
     transform: props.open ? 'translate(-50%, -50%)' : 'translate(-50%, -100%)',
@@ -37,13 +37,16 @@ export const Form: any = styled.form((props: any) => [
     boxShadow: `0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)`,
     transition: `all 0.3s cubic-bezier(.25,.8,.25,1)`,
   },
+  MediaQuery(BreakPoint.medium, {
+    padding: spaced(4),
+  }),
 ]);
 
 const backdropColors = [Color.red, Color.blue, Color.purp, Color.green];
 
 export const Backdrop: any = styled.div((props: any) => [
   {
-    position: 'absolute',
+    position: 'fixed',
     backgroundColor: backdropColors[Math.floor(Math.random() * backdropColors.length)],
     top: 0,
     left: 0,
@@ -71,15 +74,23 @@ export const TextFieldInput: any = styled.input({
   padding: spaced(1),
   width: '100%',
   borderRadius: Constant.borderRadius,
+  fontSize: 14,
 });
 
-export const TextFieldArea: any = styled.textarea({
-  height: spaced(25),
-  padding: spaced(1),
-  borderRadius: Constant.borderRadius,
-});
+export const TextFieldArea: any = styled.textarea([
+  {
+    height: spaced(25),
+    padding: spaced(1),
+    borderRadius: Constant.borderRadius,
+    fontSize: 14,
+  },
+  MediaQuery(BreakPoint.medium, {
+    height: spaced(10),
+  }),
+]);
 
 export const Submit: any = styled.button({
+  backgroundColor: Color.white,
   color: Color.black,
   padding: spaced(2),
   borderRadius: Constant.borderRadius,
