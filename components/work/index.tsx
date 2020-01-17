@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Link from 'next/link';
 import { FaChevronDown } from 'react-icons/fa';
-import Tag from '../tag';
 import * as WorkStyles from './work.styles';
+import Tag from '../tag';
+import WorkLink from '../work-link';
 
 const Work = ({ work, tags }: Props) => {
   const [selectedTag, setSelectedTag] = useState();
@@ -34,9 +34,7 @@ const Work = ({ work, tags }: Props) => {
 
       <WorkStyles.Works onScroll={() => setScrolled(true)}>
         {getWorkByTag().map((work: any) => (
-          <Link href={`/work/[slug]`} as={`/work/${work.slug}`} key={work.slug}>
-            <WorkStyles.Work color={work.color}>{work.title}</WorkStyles.Work>
-          </Link>
+          <WorkLink key={work.slug} work={work} />
         ))}
       </WorkStyles.Works>
       {!scrolled && (

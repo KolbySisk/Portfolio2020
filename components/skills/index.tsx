@@ -1,12 +1,12 @@
 import * as SkillsStyles from './skills.styles';
-import { Skill } from '../../data';
+import { Skill, Skills } from '../../data/skills';
 
-const Skills = ({ skills }: Props) => {
+const SkillsComponent = ({ skills }: Props) => {
   return (
     <SkillsStyles.Root>
       <SkillsStyles.Title>Skills</SkillsStyles.Title>
       <SkillsStyles.Skills>
-        {skills?.map((skill: Skill) => (
+        {Object.values(skills).map((skill: Skill) => (
           <SkillsStyles.Skill key={skill.title} skill={skill}>
             <div>
               <SkillsStyles.SkillTitle className="skill-title">
@@ -28,7 +28,7 @@ const Skills = ({ skills }: Props) => {
 };
 
 interface Props {
-  skills: Skill[];
+  skills: Skills;
 }
 
-export default Skills;
+export default SkillsComponent;

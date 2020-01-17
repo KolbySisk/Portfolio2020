@@ -28,22 +28,6 @@ export const Works: any = styled.div({
   overflow: 'auto',
 });
 
-export const Work: any = styled.a((props: any) => [
-  TitleFont,
-  {
-    width: '100%',
-    height: spaced(22),
-    fontSize: '36px',
-    lineHeight: '40px',
-    display: 'flex',
-    alignItems: 'center',
-    padding: `0 ${spaced(4)}px`,
-    color: props.color,
-    backgroundColor: Color.darkGray,
-    borderBottom: `solid 4px ${props.color}`,
-  },
-]);
-
 export const ScrollHint: any = styled.div((props: any) => [
   {
     position: 'absolute',

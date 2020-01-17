@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import { AnimatePresence } from 'framer-motion';
-import PageTransition from '../components/pageTransition';
+import PageTransition from '../components/page-transition';
 
 class MyApp extends App {
   render() {

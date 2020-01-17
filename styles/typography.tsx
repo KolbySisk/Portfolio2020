@@ -1,5 +1,7 @@
+import { ReactNode } from 'react';
 import { css } from '@emotion/core';
 import { Color } from './color';
+import styled from '@emotion/styled';
 
 export const TitleFont = css({
   fontFamily: `'Righteous', 'Open sans', helvetica, sans-serif`,
@@ -33,3 +35,6 @@ export const Typography = css({
     },
   ],
 });
+
+export const FontColor: any = styled.span((props: any) => [{ '*': { color: props.color } }]);
+export const TextCenter: any = styled.span({ '*': { textAlign: 'center' } });

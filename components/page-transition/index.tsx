@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import * as PageTransitionStyles from './pageTransition.styles';
+import * as PageTransitionStyles from './page-transition.styles';
 
 const PageTransition = ({ children }: Props) => {
   return (
