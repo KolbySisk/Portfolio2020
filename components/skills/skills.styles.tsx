@@ -60,6 +60,8 @@ export const SkillTitle: any = styled.div((props: any) => [
     transition: `all 0.3s cubic-bezier(.25,.8,.25,1)`,
     opacity: 0,
     fontSize: 10,
+    padding: spaced(1 / 2),
+    lineHeight: '14px',
   },
 ]);
 
