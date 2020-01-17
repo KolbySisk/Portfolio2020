@@ -18,6 +18,7 @@ export const Skills: any = styled.div({
   gridGap: spaced(1),
   overflowX: 'scroll',
   overflowY: 'hidden',
+  paddingBottom: spaced(4),
 });
 
 const skillTitleColors = [Color.red, Color.blue, Color.purp, Color.green];
@@ -33,6 +34,7 @@ export const Skill: any = styled.div((props: any) => [
     cursor: 'default',
     ':hover .skill-title': {
       transform: 'translateY(0)',
+      opacity: 1,
       backgroundColor: skillTitleColors[Math.floor(Math.random() * skillTitleColors.length)],
     },
     ':nth-of-type(3n-1)': {
@@ -56,6 +58,8 @@ export const SkillTitle: any = styled.div((props: any) => [
     position: 'absolute',
     transform: 'translateY(100%)',
     transition: `all 0.3s cubic-bezier(.25,.8,.25,1)`,
+    opacity: 0,
+    fontSize: 10,
   },
 ]);
 
