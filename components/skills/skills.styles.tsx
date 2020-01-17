@@ -13,7 +13,7 @@ export const Title: any = styled.h2({
 
 export const Skills: any = styled.div({
   display: 'grid',
-  gridTemplateRows: `${spaced(12)}px ${spaced(12)}px ${spaced(12)}px`,
+  gridTemplateRows: `${spaced(8)}px ${spaced(8)}px ${spaced(8)}px`,
   gridAutoFlow: 'column',
   gridGap: spaced(1),
   overflowX: 'scroll',
@@ -24,8 +24,8 @@ const skillTitleColors = [Color.red, Color.blue, Color.purp, Color.green];
 
 export const Skill: any = styled.div((props: any) => [
   {
-    width: spaced(12),
-    height: spaced(12),
+    width: spaced(8),
+    height: spaced(8),
     backgroundColor: Color.white,
     borderRadius: Constant.borderRadius,
     position: 'relative',
@@ -44,8 +44,8 @@ export const Skill: any = styled.div((props: any) => [
 export const SkillTitle: any = styled.div((props: any) => [
   TitleFont,
   {
-    width: spaced(12),
-    height: spaced(12),
+    width: spaced(8),
+    height: spaced(8),
     backgroundColor: Color.white,
     borderRadius: Constant.borderRadius,
     color: Color.black,

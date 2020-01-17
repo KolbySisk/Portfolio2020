@@ -9,8 +9,9 @@ export const IntroContainer: any = styled.section([
   Gradient.redToBlue,
   {
     display: 'flex',
+    flexDirection: 'column',
     padding: spaced(4),
-    minHeight: 400,
+    minHeight: 600,
     backgroundImage: `url(${bgImage})`,
     backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat',
@@ -34,13 +35,14 @@ export const LogoText: any = styled.div({
 
 export const Intro: any = styled.p([
   {
-    width: '60%',
+    width: '100%',
     fontSize: '18px',
     lineHeight: '27px',
+    paddingTop: spaced(2),
   },
   MediaQuery(BreakPoint.medium, {
     width: '100%',
-    fontSize: 24,
-    lineHeight: '32px',
+    fontSize: 20,
+    lineHeight: '26px',
   }),
 ]);
