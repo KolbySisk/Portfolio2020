@@ -38,7 +38,9 @@ export const Work: any = styled.a((props: any) => [
     display: 'flex',
     alignItems: 'center',
     padding: `0 ${spaced(4)}px`,
-    backgroundColor: props.color,
+    color: props.color,
+    backgroundColor: Color.darkGray,
+    borderBottom: `solid 4px ${props.color}`,
   },
 ]);
 
