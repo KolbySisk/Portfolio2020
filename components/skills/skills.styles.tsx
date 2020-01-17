@@ -15,7 +15,7 @@ export const Skills: any = styled.div({
   display: 'grid',
   gridTemplateRows: `${spaced(12)}px ${spaced(12)}px ${spaced(12)}px`,
   gridAutoFlow: 'column dense',
-  gridGap: spaced(2),
+  gridGap: spaced(1),
   overflowX: 'scroll',
   overflowY: 'hidden',
 });
