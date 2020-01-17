@@ -14,7 +14,7 @@ export const Title: any = styled.h2({
 export const Skills: any = styled.div({
   display: 'grid',
   gridTemplateRows: `${spaced(12)}px ${spaced(12)}px ${spaced(12)}px`,
-  gridAutoFlow: 'column dense',
+  gridAutoFlow: 'column',
   gridGap: spaced(1),
   overflowX: 'scroll',
   overflowY: 'hidden',
@@ -34,6 +34,9 @@ export const Skill: any = styled.div((props: any) => [
     ':hover .skill-title': {
       transform: 'translateY(0)',
       backgroundColor: skillTitleColors[Math.floor(Math.random() * skillTitleColors.length)],
+    },
+    ':nth-of-type(3n-1)': {
+      transform: `translateX(${spaced(6)}px)`,
     },
   },
 ]);

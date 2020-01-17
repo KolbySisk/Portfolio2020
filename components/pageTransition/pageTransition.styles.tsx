@@ -11,7 +11,7 @@ export const Root: any = styled.div({
 export const Overlay: any = styled(motion.div)(() => [
   {
     position: 'fixed',
-    height: 'calc(100% + 75px)',
+    height: 'calc(100% + 292px)',
     width: '100%',
     top: 0,
     left: 0,
@@ -26,7 +26,7 @@ export const Trees: any = styled.div({
   backgroundImage: `url(${trees})`,
   backgroundRepeat: 'repeat-x',
   width: '100%',
-  height: '75px',
+  height: '292px',
 });
 
 export const Background: any = styled.div({

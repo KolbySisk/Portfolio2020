@@ -7,10 +7,10 @@ const PageTransition = ({ children }: Props) => {
       {children}
 
       <PageTransitionStyles.Overlay
-        initial={{ transform: 'translateY(-75px)' }}
+        initial={{ transform: 'translateY(-292px)' }}
         animate={{ transform: 'translateY(916px)' }}
-        exit={{ transform: 'translateY(-75px)' }}
-        transition={{ delay: 0.2, duration: 1, ease: [0.25, 0.8, 0.25, 1] }}>
+        exit={{ transform: 'translateY(-292px)' }}
+        transition={{ duration: 1, ease: [0.25, 0.8, 0.6, 1] }}>
         <PageTransitionStyles.Trees />
         <PageTransitionStyles.Background />
       </PageTransitionStyles.Overlay>

@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <ContactStyles.Root>
       <ContactStyles.ToggleButton onClick={() => setModalOpen(!modalOpen)}>
-        {modalOpen ? 'Cancel' : 'Message me'}
+        {modalOpen ? 'Cancel' : `Let's chat`}
       </ContactStyles.ToggleButton>
 
       <ContactStyles.Form open={modalOpen}>
