@@ -7,8 +7,19 @@ const Skills = ({ skills }: Props) => {
       <SkillsStyles.Title>Skills</SkillsStyles.Title>
       <SkillsStyles.Skills>
         {skills?.map((skill: Skill) => (
-          <SkillsStyles.Skill key={skill.title} fillPercent={skill.expertise}>
-            <SkillsStyles.SkillTitle>{skill.title}</SkillsStyles.SkillTitle>
+          <SkillsStyles.Skill key={skill.title} skill={skill}>
+            <div>
+              <SkillsStyles.SkillTitle className="skill-title">
+                {skill.title}
+              </SkillsStyles.SkillTitle>
+              <picture>
+                <source
+                  srcSet={require(`../../public/images/tech-logos/${skill.imageName}?webp`)}
+                  type="image/webp"
+                />
+                <img src={require(`../../public/images/tech-logos/${skill.imageName}`)} />
+              </picture>
+            </div>
           </SkillsStyles.Skill>
         ))}
       </SkillsStyles.Skills>
