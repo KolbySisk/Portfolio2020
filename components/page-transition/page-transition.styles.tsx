@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Color, spaced, MediaQuery, BreakPoint } from '../../styles';
+import { Color } from '../../styles';
 import { motion } from 'framer-motion';
 
 const trees = require('../../public/images/tree-top.png?webp');
@@ -16,7 +16,6 @@ export const Overlay: any = styled(motion.div)(() => [
     top: 0,
     left: 0,
     zIndex: 10,
-    transform: 'translateY(100%)',
     display: 'flex',
     flexDirection: 'column',
   },

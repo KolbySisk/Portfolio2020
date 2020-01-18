@@ -43,6 +43,7 @@ export const AllSkills: Skills = {
   react: { title: 'React', imageName: 'react.png' },
   redux: { title: 'Redux', imageName: 'redux.png' },
   rest: { title: 'RESTful API', imageName: 'restful.png' },
+  shopify: { title: 'Shopify', imageName: 'shopify.png' },
   sketch: { title: 'Sketch', imageName: 'sketch.png' },
   socketio: { title: 'Socket.IO', imageName: 'socket-io.png' },
   stripe: { title: 'Stripe', imageName: 'stripe.png' },
