@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 import { Constant, Color, spaced, TitleFont } from '../../styles';
 
 export const Root: any = styled.section({
@@ -11,7 +12,7 @@ export const Title: any = styled.h2({
   marginBottom: spaced(2),
 });
 
-export const Skills: any = styled.div({
+export const Skills: any = styled(motion.ul)({
   display: 'grid',
   gridTemplateRows: `${spaced(8)}px ${spaced(8)}px ${spaced(8)}px`,
   gridAutoFlow: 'column',
@@ -23,7 +24,7 @@ export const Skills: any = styled.div({
 
 const skillTitleColors = [Color.red, Color.blue, Color.purp, Color.green];
 
-export const Skill: any = styled.div((props: any) => [
+export const Skill: any = styled(motion.li)((props: any) => [
   {
     width: spaced(8),
     height: spaced(8),
