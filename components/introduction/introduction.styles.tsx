@@ -11,7 +11,7 @@ export const IntroContainer: any = styled.section([
     display: 'flex',
     flexDirection: 'column',
     padding: spaced(4),
-    minHeight: 600,
+    minHeight: 500,
     backgroundImage: `url(${bgImage})`,
     backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat',

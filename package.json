@@ -23,7 +23,10 @@
     "next-optimized-images": "^2.5.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-icons": "^3.8.0"
+    "react-icons": "^3.8.0",
+    "react-scroll": "^1.7.16",
+    "react-scroll-to": "^3.0.0-beta.3",
+    "sal.js": "^0.7.1"
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
