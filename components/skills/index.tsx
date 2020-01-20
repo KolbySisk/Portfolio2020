@@ -33,43 +33,35 @@ const SkillsComponent = ({ skills }: Props) => {
     const startScrolling = ({ ref, x, y }) => {
       const containerElement = ref?.current;
       const maxScrollWidth = containerElement.scrollWidth - containerElement.offsetWidth;
-      let px = Math.ceil((maxScrollWidth / speed) * 10);
-
+      const scrollSpeed = Math.ceil((maxScrollWidth / speed) * 10);
       let autoScrollingPaused = false;
 
       const autoScrollingInterval = setInterval(() => {
         if (autoScrollingPaused) return;
 
-        var scrollPercentage =
+        // scrolls linearly in right and/or down at the given scrollSpeed
+        containerElement.scrollTo(
+          x ? containerElement.scrollLeft + scrollSpeed : undefined,
+          y ? containerElement.scrollLeft + scrollSpeed : undefined
+        );
+
+        // Get 0-100 percent container has scrolled
+        let scrollPercentage =
           (100 * containerElement.scrollLeft) /
           (containerElement.scrollWidth - containerElement.clientWidth);
 
-        if (scrollPercentage >= 100) {
-          px = px * -px;
-          autoScrollingPaused = true;
-
-          setTimeout(() => {
-            autoScrollingPaused = false;
-          }, delay);
+        // Check if scrolling reached the end and stop autoScrollingInterval
+        if (scrollPercentage >= 99.9) {
+          clearInterval(autoScrollingInterval);
         }
-        if (scrollPercentage <= 0) {
-          px = Math.abs(px);
-          autoScrollingPaused = true;
-
-          setTimeout(() => {
-            autoScrollingPaused = false;
-          }, delay);
-        }
-
-        containerElement.scrollTo(
-          x ? containerElement.scrollLeft + px : undefined,
-          y ? containerElement.scrollLeft + px : undefined
-        );
       }, 10);
 
+      /**
+       * Stops autoScrolling while hovering on container
+       */
       containerElement.addEventListener(
         'mouseenter',
-        event => {
+        () => {
           autoScrollingPaused = true;
         },
         false
@@ -77,7 +69,7 @@ const SkillsComponent = ({ skills }: Props) => {
 
       containerElement.addEventListener(
         'mouseleave',
-        event => {
+        () => {
           autoScrollingPaused = false;
         },
         false

@@ -1,8 +1,11 @@
-import Link from 'next/link';
 import * as WorkBannerStyles from './work-banner.styles';
 
 const WorkBanner = ({ work }: Props) => {
-  return <WorkBannerStyles.Work color={work.color}>{work.title}</WorkBannerStyles.Work>;
+  return (
+    <WorkBannerStyles.Work color={work.color}>
+      <WorkBannerStyles.Title>{work.title}</WorkBannerStyles.Title>
+    </WorkBannerStyles.Work>
+  );
 };
 
 interface Props {
