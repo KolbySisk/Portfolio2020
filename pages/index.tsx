@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import styled from '@emotion/styled';
 import Data from '../data';
-import Introduction from '../components/introduction';
-import Skills from '../components/skills';
-import Work from '../components/work';
-import Contact from '../components/contact';
+import IntroductionSection from '../components/introduction-section';
+import SkillsSection from '../components/skills-section';
+import WorkSection from '../components/work-section';
+import ContactSection from '../components/contact-section';
 
 import { BreakPoint, MediaQuery } from '../styles/responsive';
 
@@ -17,15 +17,15 @@ const Home = () => (
 
     <Columns>
       <IntroColumn>
-        <Introduction intro={Data.intro} />
-        <Skills skills={Data.skills} />
+        <IntroductionSection intro={Data.intro} />
+        <SkillsSection skills={Data.skills} />
       </IntroColumn>
       <WorkColumn>
-        <Work work={Data.work} tags={Data.tags} />
+        <WorkSection work={Data.work} tags={Data.tags} />
       </WorkColumn>
     </Columns>
 
-    <Contact />
+    <ContactSection />
   </>
 );
 

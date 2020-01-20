@@ -1,12 +1,13 @@
-import * as SkillsStyles from './skills.styles';
-import { Skill, Skills } from '../../data/skills';
 import { useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import * as ScrollingSkillsStyles from './scrolling-skills.styles';
+import { Skill } from '../../data/skills';
+import SkillCard from '../skill-card';
 
-const SkillsComponent = ({ skills }: Props) => {
+const ScrollingSkills = ({ skills }: Props) => {
   const containerRef = useRef(null);
   const speed = 7000;
-  const delay = 1000;
+  const delay = 1500;
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -18,14 +19,6 @@ const SkillsComponent = ({ skills }: Props) => {
         when: 'beforeChildren',
         staggerChildren: 0.1,
       },
-    },
-  };
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
     },
   };
 
@@ -80,38 +73,25 @@ const SkillsComponent = ({ skills }: Props) => {
       startScrolling({ ref: containerRef, x: true, y: false });
     }, delay);
   }
+
   return (
-    <SkillsStyles.Root>
-      <SkillsStyles.Title>Skills</SkillsStyles.Title>
-      <AnimatePresence>
-        <SkillsStyles.Skills
-          ref={containerRef}
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          exit="hidden">
-          {Object.values(skills).map((skill: Skill) => (
-            <SkillsStyles.Skill key={skill.title} skill={skill} variants={item}>
-              <div>
-                <SkillsStyles.SkillTitle className="skill-title">
-                  {skill.title}
-                </SkillsStyles.SkillTitle>
-                <picture>
-                  <source
-                    srcSet={require(`../../public/images/tech-logos/${skill.imageName}?webp`)}
-                    type="image/webp"
-                  />
-                  <img src={require(`../../public/images/tech-logos/${skill.imageName}`)} />
-                </picture>
-              </div>
-            </SkillsStyles.Skill>
-          ))}
-        </SkillsStyles.Skills>
-      </AnimatePresence>
-    </SkillsStyles.Root>
+    <AnimatePresence>
+      <ScrollingSkillsStyles.Skills
+        ref={containerRef}
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        exit="hidden">
+        {skills.map((skill: Skill) => (
+          <SkillCard key={skill.title} skill={skill} />
+        ))}
+      </ScrollingSkillsStyles.Skills>
+    </AnimatePresence>
   );
 };
+
 interface Props {
-  skills: Skills;
+  skills: Skill[];
 }
-export default SkillsComponent;
+
+export default ScrollingSkills;

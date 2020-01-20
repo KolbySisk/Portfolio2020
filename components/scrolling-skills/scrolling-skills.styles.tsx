@@ -15,7 +15,7 @@ export const Title: any = styled.h2({
 export const Skills: any = styled(motion.ul)({
   display: 'grid',
   gridTemplateRows: `${spaced(8)}px ${spaced(8)}px ${spaced(8)}px`,
-  gridAutoFlow: 'column',
+  gridAutoFlow: 'column dense',
   gridGap: spaced(1),
   overflowX: 'scroll',
   overflowY: 'hidden',
