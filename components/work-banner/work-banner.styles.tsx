@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { Constant, TitleFont, spaced } from '../../styles';
+import { motion } from 'framer-motion';
 
-export const Work: any = styled.div((props: any) => {
+export const Work: any = styled(motion.div)((props: any) => {
   const bgImage = require(`../../public/images/${props.patternPath}?webp`);
 
   return [
