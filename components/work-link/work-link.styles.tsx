@@ -16,7 +16,7 @@ export const Work: any = styled(motion.a)((props: any) => {
       alignItems: 'center',
       padding: `0 ${spaced(4)}px`,
       backgroundColor: props.color,
-      textShadow: `0 2px 2px rgba(0,0,0, 1)`,
+      textShadow: `0 2px 2px rgba(0,0,0, .6)`,
       backgroundImage: `url(${bgImage})`,
     },
   ];

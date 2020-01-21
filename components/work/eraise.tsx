@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-import { Color, DoubleColumn, ElementSpacing, FontColor, TextCenter, spaced } from '../../styles';
+import { Color, DoubleColumn, ElementSpacing, FontColor, TextCenter } from '../../styles';
 import ContentSquare from '../content-square';
 import ImageSquare from '../image-square';
 import CenterBanner from '../center-banner';
@@ -7,21 +6,9 @@ import SkillsBanner from '../skills-banner';
 import WorkBanner from '../work-banner';
 import AllProjects from '../all-projects';
 import NextProject from '../next-project';
+import Footer from '../footer';
 
-export const Logo: any = styled.div({
-  display: 'flex',
-  height: spaced(5),
-  width: 'auto',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: `${spaced(6)}px`,
-  boxSizing: 'content-box',
-  svg: {
-    height: '100%',
-  },
-});
-
-const Nui = ({ work, nextWork }: Props) => {
+export default ({ work, nextWork }: Props) => {
   return (
     <>
       <WorkBanner work={work} />
@@ -243,13 +230,7 @@ const Nui = ({ work, nextWork }: Props) => {
         <NextProject work={nextWork} />
       </DoubleColumn>
 
-      <div>
-        <Logo
-          dangerouslySetInnerHTML={{
-            __html: require('../../public/images/logo-red.svg?include&size=80'),
-          }}
-        />
-      </div>
+      <Footer />
     </>
   );
 };
@@ -258,5 +239,3 @@ interface Props {
   work: any;
   nextWork: any;
 }
-
-export default Nui;

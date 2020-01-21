@@ -14,7 +14,7 @@ export const Link: any = styled(motion.a)((props: any) => {
       backgroundColor: props.backgroundColor ? props.backgroundColor : Color.black,
       flex: 1,
       minHeight: spaced(16),
-      textShadow: `0 2px 2px rgba(0,0,0, 1)`,
+      textShadow: `0 2px 2px rgba(0,0,0, .6)`,
       backgroundImage: `url(${bgImage})`,
       fontSize: 32,
     },
