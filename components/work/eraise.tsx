@@ -5,6 +5,8 @@ import ImageSquare from '../image-square';
 import CenterBanner from '../center-banner';
 import SkillsBanner from '../skills-banner';
 import WorkBanner from '../work-banner';
+import AllProjects from '../all-projects';
+import NextProject from '../next-project';
 
 export const Logo: any = styled.div({
   display: 'flex',
@@ -20,7 +22,7 @@ export const Logo: any = styled.div({
   },
 });
 
-const Nui = ({ work }: Props) => {
+const Nui = ({ work, nextWork }: Props) => {
   return (
     <>
       <WorkBanner work={work} />
@@ -230,6 +232,11 @@ const Nui = ({ work }: Props) => {
         </p>
       </CenterBanner>
 
+      <DoubleColumn>
+        <AllProjects />
+        <NextProject work={nextWork} />
+      </DoubleColumn>
+
       <div>
         <Logo
           dangerouslySetInnerHTML={{
@@ -243,6 +250,7 @@ const Nui = ({ work }: Props) => {
 
 interface Props {
   work: any;
+  nextWork: any;
 }
 
 export default Nui;

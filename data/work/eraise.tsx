@@ -10,9 +10,12 @@ export const EraiseData = {
   skills: [
     AllSkills.nextjs,
     AllSkills.typescript,
+    AllSkills.redux,
     AllSkills.emotion,
     AllSkills.express,
     AllSkills.rest,
+    AllSkills.knex,
+    AllSkills.objection,
     AllSkills.firebase,
     AllSkills.plaid,
     AllSkills.stripe,
