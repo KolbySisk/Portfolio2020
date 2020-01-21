@@ -6,7 +6,14 @@ const WorkLink = ({ work }: Props) => {
     <Link href={`/work/[slug]`} as={`/work/${work.slug}`} key={work.slug}>
       <WorkLinkStyles.Work
         color={work.color}
-        patternPath={work.patternName || 'work/eraise/pattern.png'}>
+        patternPath={work.patternName || 'work/eraise/pattern.png'}
+        animate={{ backgroundPositionX: -20000 }}
+        exit={{}}
+        transition={{
+          loop: Infinity,
+          ease: 'linear',
+          duration: 1000,
+        }}>
         {work.title}
       </WorkLinkStyles.Work>
     </Link>

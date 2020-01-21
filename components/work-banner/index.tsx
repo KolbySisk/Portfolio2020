@@ -6,12 +6,12 @@ const WorkBanner = ({ work }: Props) => {
     <WorkBannerStyles.Work
       color={work.color}
       patternPath={work.patternName || 'work/eraise/pattern.png'}
-      animate={{ backgroundPositionX: '-100%' }}
+      animate={{ backgroundPositionX: -5000 }}
       exit={{}}
       transition={{
         loop: Infinity,
         ease: 'linear',
-        duration: 10,
+        duration: 1000,
       }}>
       <WorkBannerStyles.Title>{work.title}</WorkBannerStyles.Title>
     </WorkBannerStyles.Work>
