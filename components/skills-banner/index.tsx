@@ -21,7 +21,7 @@ const SkillsBanner = ({ skills }: Props) => {
 
   return (
     <AnimatePresence>
-      <CenterBanner backgroundColor={Color.white}>
+      <SkillsBannerStyles.Container>
         <SkillsBannerStyles.Skills
           variants={container}
           initial="hidden"
@@ -31,7 +31,7 @@ const SkillsBanner = ({ skills }: Props) => {
             <SkillCard key={skill.title} skill={skill} />
           ))}
         </SkillsBannerStyles.Skills>
-      </CenterBanner>
+      </SkillsBannerStyles.Container>
     </AnimatePresence>
   );
 };

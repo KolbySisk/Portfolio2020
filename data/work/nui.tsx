@@ -7,7 +7,7 @@ export const NuiData = {
   slug: 'nui',
   about: 'yoo',
   tags: ['Project'],
-  color: Color.blue,
+  color: Color.red,
   skills: [AllSkills.node, AllSkills.as, AllSkills.angular, AllSkills.react],
   component: Nui,
 };

@@ -1,22 +1,23 @@
 import styled from '@emotion/styled';
-import { BreakPoint, MediaQuery } from '../../styles';
+import { BreakPoint, MediaQuery, Color } from '../../styles';
 
 export const Root: any = styled.article(
   (props: any) => [
     {
+      backgroundColor: props.backgroundColor ? props.backgroundColor : Color.white,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       overflow: 'hidden',
       width: '50%',
       height: 0,
-      paddingBottom: '50%',
+      paddingBottom: '33.333%',
       position: 'relative',
     },
   ],
   MediaQuery(BreakPoint.medium, {
     width: '100%',
-    paddingBottom: '100%',
+    paddingBottom: '66.666%',
   })
 );
 
@@ -28,7 +29,7 @@ export const ContentContainer: any = styled.div({
   right: 0,
   bottom: 0,
   img: {
-    height: '100%',
+    width: '100%',
     maxWidth: 'none',
   },
 });

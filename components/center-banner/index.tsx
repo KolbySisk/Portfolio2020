@@ -11,7 +11,7 @@ const CenterBanner = ({ children, backgroundColor }: Props) => {
 
 interface Props {
   children: any;
-  backgroundColor: Color;
+  backgroundColor?: Color;
 }
 
 export default CenterBanner;
