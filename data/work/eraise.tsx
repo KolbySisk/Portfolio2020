@@ -6,7 +6,8 @@ export const EraiseData = {
   title: 'Eraise',
   slug: 'eraise',
   tags: ['Project'],
-  color: Color.blue,
+  color: Color.purp,
+  patternPath: 'work/eraise/pattern.png',
   skills: [
     AllSkills.nextjs,
     AllSkills.typescript,

@@ -9,5 +9,7 @@ export const Link: any = styled.a((props: any) => [
     height: spaced(30),
     backgroundColor: props.backgroundColor ? props.backgroundColor : Color.black,
     flex: 1,
+    minHeight: spaced(16),
+    textShadow: `0 2px 2px rgba(0,0,0, .4)`,
   },
 ]);

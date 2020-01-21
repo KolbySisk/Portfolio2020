@@ -5,5 +5,5 @@ export const DesignSystems2020 = {
   slug: 'design-systems-in-2020',
   about: 'yo',
   tags: ['Writing'],
-  color: Color.purp,
+  color: Color.blue,
 };

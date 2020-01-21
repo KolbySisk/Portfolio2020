@@ -11,11 +11,11 @@ import NextProject from '../next-project';
 export const Logo: any = styled.div({
   display: 'flex',
 
-  height: spaced(8),
+  height: spaced(5),
   width: 'auto',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: `${spaced(8)}px`,
+  padding: `${spaced(6)}px`,
   boxSizing: 'content-box',
   svg: {
     height: '100%',

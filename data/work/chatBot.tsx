@@ -5,5 +5,5 @@ export const ChatBot = {
   slug: 'chat-bot',
   about: 'yo',
   tags: ['Project'],
-  color: Color.blue,
+  color: Color.red,
 };

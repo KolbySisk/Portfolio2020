@@ -8,4 +8,5 @@ export const Link: any = styled.a({
   height: spaced(30),
   backgroundColor: Color.black,
   flex: 1,
+  minHeight: spaced(16),
 });
