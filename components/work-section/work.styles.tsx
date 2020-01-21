@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Color, spaced, TitleFont, MediaQuery, BreakPoint } from '../../styles';
 import { keyframes } from '@emotion/core';
+import { motion } from 'framer-motion';
 
 export const Root: any = styled.section({
   height: '100%',
@@ -24,7 +25,7 @@ export const Tags: any = styled.div({
   },
 });
 
-export const Works: any = styled.div({
+export const Works: any = styled(motion.div)({
   overflow: 'auto',
 });
 

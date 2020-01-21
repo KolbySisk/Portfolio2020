@@ -25,7 +25,7 @@ const ScrollingSkills = ({ skills }: Props) => {
   if (process.browser) {
     const startScrolling = ({ ref, x, y }) => {
       const containerElement = ref?.current;
-      const maxScrollWidth = containerElement.scrollWidth - containerElement.offsetWidth;
+      const maxScrollWidth = containerElement?.scrollWidth - containerElement?.offsetWidth;
       const scrollSpeed = Math.ceil((maxScrollWidth / speed) * 10);
       let autoScrollingPaused = false;
 

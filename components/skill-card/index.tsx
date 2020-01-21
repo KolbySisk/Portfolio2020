@@ -11,19 +11,15 @@ const SkillCard = ({ skill }: Props) => {
   };
 
   return (
-    <SkillCardStyles.Skill key={skill.title} skill={skill} variants={item}>
-      <>
-        <SkillCardStyles.SkillTitle className="skill-title">
-          {skill.title}
-        </SkillCardStyles.SkillTitle>
-        <picture>
-          <source
-            srcSet={require(`../../public/images/tech-logos/${skill.imageName}?webp`)}
-            type="image/webp"
-          />
-          <img src={require(`../../public/images/tech-logos/${skill.imageName}`)} />
-        </picture>
-      </>
+    <SkillCardStyles.Skill skill={skill} variants={item}>
+      <SkillCardStyles.SkillTitle className="skill-title">{skill.title}</SkillCardStyles.SkillTitle>
+      <picture>
+        <source
+          srcSet={require(`../../public/images/tech-logos/${skill.imageName}?webp`)}
+          type="image/webp"
+        />
+        <img src={require(`../../public/images/tech-logos/${skill.imageName}`)} />
+      </picture>
     </SkillCardStyles.Skill>
   );
 };
