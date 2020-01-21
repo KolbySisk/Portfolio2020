@@ -52,7 +52,7 @@ const ScrollingSkills = ({ skills }: Props) => {
       /**
        * Stops autoScrolling while hovering on container
        */
-      containerElement.addEventListener(
+      containerElement?.addEventListener(
         'mouseenter',
         () => {
           autoScrollingPaused = true;
@@ -60,7 +60,7 @@ const ScrollingSkills = ({ skills }: Props) => {
         false
       );
 
-      containerElement.addEventListener(
+      containerElement?.addEventListener(
         'mouseleave',
         () => {
           autoScrollingPaused = false;

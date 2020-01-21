@@ -5,9 +5,9 @@ import Nui from '../../components/work/nui';
 export const NuiData = {
   title: 'NUI',
   slug: 'nui',
-  about: 'yoo',
   tags: ['Project'],
   color: Color.red,
+  patternPath: 'work/eraise/pattern.png',
   skills: [
     AllSkills.angular,
     AllSkills.typescript,

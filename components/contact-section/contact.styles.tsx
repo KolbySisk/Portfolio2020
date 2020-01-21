@@ -54,7 +54,7 @@ export const Backdrop: any = styled.div((props: any) => [
     bottom: 0,
     zIndex: 1,
     opacity: props.open ? 1 : 0,
-    transition: `all 0.3s cubic-bezier(.25,.8,.25,1)`,
+    transition: `all 0.5s cubic-bezier(.25,.8,.25,1)`,
     pointerEvents: props.open ? 'auto' : 'none',
   },
 ]);
@@ -95,3 +95,20 @@ export const Submit: any = styled.button({
   padding: spaced(2),
   borderRadius: Constant.borderRadius,
 });
+
+export const Thanks: any = styled.div([
+  {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: Color.white,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    h2: {
+      color: Color.black,
+    },
+  },
+]);
