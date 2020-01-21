@@ -1,6 +1,5 @@
-import * as WorkBannerStyles from './work-banner.styles';
-import { useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import * as WorkBannerStyles from './work-banner.styles';
 
 const WorkBanner = ({ work }: Props) => {
   return (
@@ -8,12 +7,13 @@ const WorkBanner = ({ work }: Props) => {
       <WorkBannerStyles.Work
         color={work.color}
         patternPath={work.patternName || 'work/eraise/pattern.png'}
-        animate={{ backgroundPositionX: -5000 }}
+        initial={{ backgroundPositionX: '0px' }}
+        animate={{ backgroundPositionX: '-5000px' }}
         exit={{}}
         transition={{
           loop: Infinity,
           ease: 'linear',
-          duration: 1000,
+          duration: 100,
         }}>
         <WorkBannerStyles.Title>{work.title}</WorkBannerStyles.Title>
       </WorkBannerStyles.Work>

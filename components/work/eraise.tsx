@@ -10,7 +10,6 @@ import NextProject from '../next-project';
 
 export const Logo: any = styled.div({
   display: 'flex',
-
   height: spaced(5),
   width: 'auto',
   alignItems: 'center',
@@ -66,7 +65,7 @@ const Nui = ({ work, nextWork }: Props) => {
         </FontColor>
       </CenterBanner>
       <DoubleColumn>
-        <ContentSquare backgroundColor={Color.red}>
+        <ContentSquare backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Branding</h2>
           </ElementSpacing>
@@ -91,18 +90,20 @@ const Nui = ({ work, nextWork }: Props) => {
       </DoubleColumn>
 
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.blue}>
-          <ElementSpacing>
-            <h2>Wireframes</h2>
-          </ElementSpacing>
-          <p>
-            Since one of my goals was to finish this project quickly, I had to make agile decisions.
-            The wireframing process is a great example. Instead of using a prototyping tool like I
-            normally would when working with a team, I decided to stick with only pen and paper then
-            move directly into the design process. This meant I was doing a lot of touch up and
-            iterations in design phase, but overall it helped me get the designs done quicker so I
-            could move onto the development.
-          </p>
+        <ContentSquare backgroundColor={Color.silver}>
+          <FontColor color={Color.darkGray}>
+            <ElementSpacing>
+              <h2>Wireframes</h2>
+            </ElementSpacing>
+            <p>
+              Since one of my goals was to finish this project quickly, I had to make agile
+              decisions. The wireframing process is a great example. Instead of using a prototyping
+              tool like I normally would when working with a team, I decided to stick with only pen
+              and paper then move directly into the design process. This meant I was doing a lot of
+              touch up and iterations in design phase, but overall it helped me get the designs done
+              quicker so I could move onto the development.
+            </p>
+          </FontColor>
         </ContentSquare>
         <ImageSquare>
           <picture>
@@ -116,7 +117,7 @@ const Nui = ({ work, nextWork }: Props) => {
       </DoubleColumn>
 
       <DoubleColumn>
-        <ContentSquare backgroundColor={Color.red}>
+        <ContentSquare backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Design Iterations</h2>
           </ElementSpacing>
@@ -139,20 +140,23 @@ const Nui = ({ work, nextWork }: Props) => {
       </DoubleColumn>
 
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.blue}>
-          <ElementSpacing>
-            <h2>Finished Designs</h2>
-          </ElementSpacing>
-          <p>
-            Ultimately I created a design that I really liked. I was able to create a design
-            language that would be used when designing new pages. The design language helped
-            streamline the design process and ensure consistency. The goals of the design were to
-            make it easy & quick to donate, and sign up. I also wanted to put an importance on
-            learning exactly what the platform does, what information it collects, and ensure users
-            felt secure. Lastly, I wanted to create a unique and fun experience when using the app.
-          </p>
+        <ContentSquare backgroundColor={Color.silver}>
+          <FontColor color={Color.darkGray}>
+            <ElementSpacing>
+              <h2>Finished Designs</h2>
+            </ElementSpacing>
+            <p>
+              Ultimately I created a design that I really liked. I was able to create a design
+              language that would be used when designing new pages. The design language helped
+              streamline the design process and ensure consistency. The goals of the design were to
+              make it easy & quick to donate, and sign up. I also wanted to put an importance on
+              learning exactly what the platform does, what information it collects, and ensure
+              users felt secure. Lastly, I wanted to create a unique and fun experience when using
+              the app.
+            </p>
+          </FontColor>
         </ContentSquare>
-        <ImageSquare backgroundColor={Color.blue}>
+        <ImageSquare>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/designs.png?webp`)}
@@ -166,7 +170,7 @@ const Nui = ({ work, nextWork }: Props) => {
       <SkillsBanner skills={work.skills} />
 
       <DoubleColumn>
-        <ContentSquare backgroundColor={Color.red}>
+        <ContentSquare backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Code</h2>
           </ElementSpacing>
@@ -192,20 +196,22 @@ const Nui = ({ work, nextWork }: Props) => {
       </DoubleColumn>
 
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.blue}>
-          <ElementSpacing>
-            <h2>Infrastructure</h2>
-          </ElementSpacing>
-          <p>
-            While Eraise is a small app with a small scope, it required a complex infrastructure.
-            One of the big concerns was security. I researched and used the most secure technologies
-            for the given problems. Google's Firebase was used for authentication. Stripe was used
-            for payments. Stripe's Plaid was used for authenticating with the banks and returning
-            loan information. GitHub was used for the code repository and Heroku for hosting.
-            Overall I love the infrastructure that I came up with for Eraise.
-          </p>
+        <ContentSquare backgroundColor={Color.silver}>
+          <FontColor color={Color.darkGray}>
+            <ElementSpacing>
+              <h2>Infrastructure</h2>
+            </ElementSpacing>
+            <p>
+              While Eraise is a small app with a small scope, it required a complex infrastructure.
+              One of the big concerns was security. I researched and used the most secure
+              technologies for the given problems. Google's Firebase was used for authentication.
+              Stripe was used for payments. Stripe's Plaid was used for authenticating with the
+              banks and returning loan information. GitHub was used for the code repository and
+              Heroku for hosting. Overall I love the infrastructure that I came up with for Eraise.
+            </p>
+          </FontColor>
         </ContentSquare>
-        <ImageSquare backgroundColor={Color.blue}>
+        <ImageSquare>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/infrastructure.png?webp`)}

@@ -4,22 +4,23 @@ import { AnimatePresence } from 'framer-motion';
 
 const WorkLink = ({ work }: Props) => {
   return (
-    <Link href={`/work/[slug]`} as={`/work/${work.slug}`} key={work.slug}>
-      <AnimatePresence>
+    <AnimatePresence>
+      <Link href={`/work/[slug]`} as={`/work/${work.slug}`} key={work.slug}>
         <WorkLinkStyles.Work
           color={work.color}
           patternPath={work.patternName || 'work/eraise/pattern.png'}
-          animate={{ backgroundPositionX: -20000 }}
+          initial={{ backgroundPositionX: '0px' }}
+          animate={{ backgroundPositionX: '-5000px' }}
           exit={{}}
           transition={{
             loop: Infinity,
             ease: 'linear',
-            duration: 1000,
+            duration: 100,
           }}>
           {work.title}
         </WorkLinkStyles.Work>
-      </AnimatePresence>
-    </Link>
+      </Link>
+    </AnimatePresence>
   );
 };
 

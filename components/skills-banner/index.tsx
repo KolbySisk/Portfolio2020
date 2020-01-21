@@ -1,6 +1,4 @@
 import * as SkillsBannerStyles from './skills-banner.styles';
-import CenterBanner from '../center-banner';
-import { Color } from '../../styles';
 import { Skill } from '../../data/skills';
 import { AnimatePresence } from 'framer-motion';
 import SkillCard from '../skill-card';

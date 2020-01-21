@@ -8,12 +8,13 @@ const NextProject = ({ work }: Props) => {
       <NextProjectStyles.Link
         backgroundColor={work.color}
         patternPath={work.patternName || 'work/eraise/pattern.png'}
-        animate={{ backgroundPositionX: -5000 }}
+        initial={{ backgroundPositionX: '0px' }}
+        animate={{ backgroundPositionX: '-5000px' }}
         exit={{}}
         transition={{
           loop: Infinity,
           ease: 'linear',
-          duration: 1000,
+          duration: 100,
         }}>
         {work.title}
       </NextProjectStyles.Link>
