@@ -6,14 +6,13 @@ export const Root: any = styled.footer();
 export const Logo: any = styled.div([
   {
     display: 'flex',
-    height: spaced(5),
     width: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: `${spaced(6)}px`,
+    padding: spaced(6),
     boxSizing: 'content-box',
     svg: {
-      height: '100%',
+      height: spaced(5),
     },
   },
   MediaQuery(BreakPoint.medium, { height: spaced(3) }),
