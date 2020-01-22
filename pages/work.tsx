@@ -1,14 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import styled from '@emotion/styled';
 import Data from '../data';
-import IntroductionSection from '../components/introduction-section';
-import SkillsSection from '../components/skills-section';
 import WorkSection from '../components/work-section';
 import ContactSection from '../components/contact-section';
-
 import { Color } from '../styles';
-import Link from 'next/link';
 
 const Work = () => (
   <>
