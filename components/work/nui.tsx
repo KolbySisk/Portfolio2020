@@ -26,10 +26,10 @@ export default ({ work, nextWork }: Props) => {
         <ImageSquare>
           <picture>
             <source
-              srcSet={require(`../../public/images/work/eraise/about.png?webp`)}
+              srcSet={require(`../../public/images/work/nui/about.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/eraise/about.png`)} />
+            <img src={require(`../../public/images/work/nui/about.png`)} />
           </picture>
         </ImageSquare>
       </DoubleColumn>
@@ -64,10 +64,10 @@ export default ({ work, nextWork }: Props) => {
         <ImageSquare>
           <picture>
             <source
-              srcSet={require(`../../public/images/work/eraise/branding.png?webp`)}
+              srcSet={require(`../../public/images/work/nui/architecture.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/eraise/branding.png`)} />
+            <img src={require(`../../public/images/work/nui/architecture.png`)} />
           </picture>
         </ImageSquare>
       </DoubleColumn>
@@ -89,10 +89,10 @@ export default ({ work, nextWork }: Props) => {
         <ImageSquare>
           <picture>
             <source
-              srcSet={require(`../../public/images/work/eraise/wireframes.png?webp`)}
+              srcSet={require(`../../public/images/work/nui/leadership.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/eraise/wireframes.png`)} />
+            <img src={require(`../../public/images/work/nui/leadership.png`)} />
           </picture>
         </ImageSquare>
       </DoubleColumn>
@@ -114,10 +114,10 @@ export default ({ work, nextWork }: Props) => {
         <ImageSquare>
           <picture>
             <source
-              srcSet={require(`../../public/images/work/eraise/iterations.png?webp`)}
+              srcSet={require(`../../public/images/work/nui/systems.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/eraise/iterations.png`)} />
+            <img src={require(`../../public/images/work/nui/systems.png`)} />
           </picture>
         </ImageSquare>
       </DoubleColumn>
@@ -145,10 +145,10 @@ export default ({ work, nextWork }: Props) => {
         <ImageSquare>
           <picture>
             <source
-              srcSet={require(`../../public/images/work/eraise/designs.png?webp`)}
+              srcSet={require(`../../public/images/work/nui/components.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/eraise/designs.png`)} />
+            <img src={require(`../../public/images/work/nui/components.png`)} />
           </picture>
         </ImageSquare>
       </DoubleColumn>
@@ -167,10 +167,10 @@ export default ({ work, nextWork }: Props) => {
         <ImageSquare>
           <picture>
             <source
-              srcSet={require(`../../public/images/work/eraise/code.png?webp`)}
+              srcSet={require(`../../public/images/work/nui/teaching.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/eraise/code.png`)} />
+            <img src={require(`../../public/images/work/nui/teaching.png`)} />
           </picture>
         </ImageSquare>
       </DoubleColumn>

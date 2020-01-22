@@ -107,6 +107,7 @@ export const Thanks: any = styled.div([
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: Constant.borderRadius,
     h2: {
       color: Color.black,
     },

@@ -24,6 +24,7 @@ export const EraiseData = {
     AllSkills.postgresql,
     AllSkills.heroku,
     AllSkills.git,
+    AllSkills.drawio,
     AllSkills.sketch,
     AllSkills.ps,
     AllSkills.illustrator,
