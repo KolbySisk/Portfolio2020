@@ -1,5 +1,7 @@
 import React from 'react';
 import App from 'next/app';
+import Router from 'next/router';
+import withGA from 'next-ga';
 import { AnimatePresence } from 'framer-motion';
 import PageTransition from '../components/page-transition';
 
@@ -17,4 +19,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default withGA('UA-156696606-1', Router)(MyApp);
