@@ -26,6 +26,21 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/images/favicons/favicon-152.png" sizes="152x152" />
           <link rel="apple-touch-icon" href="/images/favicons/favicon-167.png" sizes="167x167" />
           <link rel="apple-touch-icon" href="/images/favicons/favicon-180.png" sizes="180x180" />
+
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=UA-156696606-1`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-156696606-1', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
