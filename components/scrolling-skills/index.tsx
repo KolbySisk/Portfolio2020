@@ -6,11 +6,9 @@ import SkillCard from '../skill-card';
 
 const ScrollingSkills = ({ skills }: Props) => {
   const containerRef = useRef(null);
-  const speed = 3200;
-  const delay = 1500;
-  let skillRows = [];
+  const skillRows = [];
 
-  const container = {
+  const containerMotion = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +21,7 @@ const ScrollingSkills = ({ skills }: Props) => {
     },
   };
 
-  if (process.browser) {
+  const createSkillRows = () => {
     const numOfRows = 3;
 
     for (let i = 0; i < 3; i++) {
@@ -35,56 +33,61 @@ const ScrollingSkills = ({ skills }: Props) => {
 
       skillRows.push(row);
     }
+  };
 
-    const startScrolling = ({ ref, x, y }) => {
-      const containerElement = ref?.current;
-      const maxScrollWidth = containerElement?.scrollWidth - containerElement?.offsetWidth;
-      const scrollSpeed = Math.ceil((maxScrollWidth / speed) * 10);
-      let autoScrollingPaused = false;
+  const startScrolling = ({ ref, x, y }) => {
+    const speed = 3200;
+    const containerElement = ref?.current;
+    const maxScrollWidth = containerElement?.scrollWidth - containerElement?.offsetWidth;
+    const scrollSpeed = Math.ceil((maxScrollWidth / speed) * 10);
+    let autoScrollingPaused = false;
 
-      const autoScrollingInterval = setInterval(() => {
-        if (autoScrollingPaused) return;
+    const autoScrollingInterval = setInterval(() => {
+      if (autoScrollingPaused) return;
 
-        // scrolls linearly in right and/or down at the given scrollSpeed
-        containerElement?.scrollTo(
-          x ? containerElement?.scrollLeft + scrollSpeed : undefined,
-          y ? containerElement?.scrollLeft + scrollSpeed : undefined
-        );
-
-        // Get 0-100 percent container has scrolled
-        let scrollPercentage =
-          (100 * containerElement?.scrollLeft) /
-          (containerElement?.scrollWidth - containerElement?.clientWidth);
-
-        // Check if scrolling reached the end and stop autoScrollingInterval
-        if (scrollPercentage >= 99.9) {
-          clearInterval(autoScrollingInterval);
-        }
-      }, 10);
-
-      /**
-       * Stops autoScrolling while hovering on container
-       */
-      containerElement?.addEventListener(
-        'mouseenter',
-        () => {
-          autoScrollingPaused = true;
-        },
-        false
+      // scrolls linearly right and/or down at the given scrollSpeed
+      containerElement?.scrollTo(
+        x ? containerElement?.scrollLeft + scrollSpeed : undefined,
+        y ? containerElement?.scrollLeft + scrollSpeed : undefined
       );
 
-      containerElement?.addEventListener(
-        'mouseleave',
-        () => {
-          autoScrollingPaused = false;
-        },
-        false
-      );
-    };
+      // Get percent container has scrolled
+      let scrollPercentage =
+        (100 * containerElement?.scrollLeft) /
+        (containerElement?.scrollWidth - containerElement?.clientWidth);
+
+      // Check if scrolling reached the end and stop autoScrollingInterval
+      if (scrollPercentage >= 99.9) {
+        clearInterval(autoScrollingInterval);
+      }
+    }, 10);
+
+    /**
+     * Stops autoScrolling while hovering on container
+     */
+    containerElement?.addEventListener(
+      'mouseenter',
+      () => {
+        autoScrollingPaused = true;
+      },
+      false
+    );
+
+    containerElement?.addEventListener(
+      'mouseleave',
+      () => {
+        autoScrollingPaused = false;
+      },
+      false
+    );
+  };
+
+  if (process.browser) {
+    createSkillRows();
 
     setTimeout(() => {
       startScrolling({ ref: containerRef, x: true, y: false });
-    }, delay);
+    }, 1500);
   }
 
   return (
@@ -93,7 +96,7 @@ const ScrollingSkills = ({ skills }: Props) => {
         {skillRows.map((skillRow, i) => (
           <ScrollingSkillsStyles.SkillRow
             key={i}
-            variants={container}
+            variants={containerMotion}
             initial="hidden"
             animate="visible"
             exit="hidden">
