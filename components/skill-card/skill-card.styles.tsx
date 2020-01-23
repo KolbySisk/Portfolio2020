@@ -6,6 +6,7 @@ const skillTitleColors = [Color.red, Color.blue, Color.purp, Color.green];
 
 export const Skill: any = styled(motion.li)((props: any) => [
   {
+    flexShrink: 0,
     width: spaced(8),
     height: spaced(8),
     backgroundColor: Color.white,
@@ -13,6 +14,8 @@ export const Skill: any = styled(motion.li)((props: any) => [
     position: 'relative',
     overflow: 'hidden',
     cursor: 'default',
+    marginRight: spaced(1),
+    marginBottom: spaced(1),
     ':hover .skill-title': {
       transform: 'translateY(0)',
       opacity: 1,
@@ -20,6 +23,10 @@ export const Skill: any = styled(motion.li)((props: any) => [
     },
     ':nth-of-type(3n-1)': {
       transform: `translateX(${spaced(6)}px)`,
+    },
+    ':last-of-type': {
+      marginRight: 0,
+      marginBottom: 0,
     },
   },
 ]);

@@ -6,8 +6,9 @@ import SkillCard from '../skill-card';
 
 const ScrollingSkills = ({ skills }: Props) => {
   const containerRef = useRef(null);
-  const speed = 7000;
+  const speed = 3200;
   const delay = 1500;
+  let skillRows = [];
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -17,12 +18,24 @@ const ScrollingSkills = ({ skills }: Props) => {
       transition: {
         delay: 0.4,
         when: 'beforeChildren',
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       },
     },
   };
 
   if (process.browser) {
+    const numOfRows = 3;
+
+    for (let i = 0; i < 3; i++) {
+      const chunkLength = Math.ceil(skills.length / numOfRows);
+      const chunkBegin = chunkLength * i;
+      const chunkEnd = chunkLength * (i + 1);
+
+      const row = skills.slice(chunkBegin, chunkEnd);
+
+      skillRows.push(row);
+    }
+
     const startScrolling = ({ ref, x, y }) => {
       const containerElement = ref?.current;
       const maxScrollWidth = containerElement?.scrollWidth - containerElement?.offsetWidth;
@@ -33,15 +46,15 @@ const ScrollingSkills = ({ skills }: Props) => {
         if (autoScrollingPaused) return;
 
         // scrolls linearly in right and/or down at the given scrollSpeed
-        containerElement.scrollTo(
-          x ? containerElement.scrollLeft + scrollSpeed : undefined,
-          y ? containerElement.scrollLeft + scrollSpeed : undefined
+        containerElement?.scrollTo(
+          x ? containerElement?.scrollLeft + scrollSpeed : undefined,
+          y ? containerElement?.scrollLeft + scrollSpeed : undefined
         );
 
         // Get 0-100 percent container has scrolled
         let scrollPercentage =
-          (100 * containerElement.scrollLeft) /
-          (containerElement.scrollWidth - containerElement.clientWidth);
+          (100 * containerElement?.scrollLeft) /
+          (containerElement?.scrollWidth - containerElement?.clientWidth);
 
         // Check if scrolling reached the end and stop autoScrollingInterval
         if (scrollPercentage >= 99.9) {
@@ -76,14 +89,18 @@ const ScrollingSkills = ({ skills }: Props) => {
 
   return (
     <AnimatePresence>
-      <ScrollingSkillsStyles.Skills
-        ref={containerRef}
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        exit="hidden">
-        {skills.map((skill: Skill) => (
-          <SkillCard key={skill.title} skill={skill} />
+      <ScrollingSkillsStyles.Skills ref={containerRef}>
+        {skillRows.map((skillRow, i) => (
+          <ScrollingSkillsStyles.SkillRow
+            key={i}
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            exit="hidden">
+            {skillRow.map((skill: Skill) => (
+              <SkillCard key={skill.title} skill={skill} />
+            ))}
+          </ScrollingSkillsStyles.SkillRow>
         ))}
       </ScrollingSkillsStyles.Skills>
     </AnimatePresence>
