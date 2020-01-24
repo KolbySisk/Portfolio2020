@@ -214,6 +214,7 @@ export default ({ work, nextWork }: Props) => {
         width="100%"
         height="auto"
         style={{ display: 'flex' }}
+        loop={true}
         playing
       />
 
