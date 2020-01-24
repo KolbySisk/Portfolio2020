@@ -1,20 +1,18 @@
 import { Color, ElementSpacing, FontColor, TextCenter } from '../../styles';
 import DoubleColumn from '../double-column';
-import ContentSquare from '../content-square';
-import ImageSquare from '../image-square';
-import CenterBanner from '../center-banner';
 import SkillsBanner from '../skills-banner';
 import WorkBanner from '../work-banner';
 import AllProjects from '../all-projects';
 import NextProject from '../next-project';
 import Footer from '../footer';
+import Animator, { ContainerType } from '../animator';
 
 export default ({ work, nextWork }: Props) => {
   return (
     <>
       <WorkBanner work={work} />
       <DoubleColumn>
-        <ContentSquare backgroundColor={Color.darkGray}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.darkGray}>
           <ElementSpacing>
             <h2>About</h2>
           </ElementSpacing>
@@ -26,8 +24,8 @@ export default ({ work, nextWork }: Props) => {
             choose to donate - once or monthly - to a random user, or explore the community and
             donate to a specific user.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/about.png?webp`)}
@@ -35,9 +33,9 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/about.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-      <CenterBanner backgroundColor={Color.silver}>
+      <Animator containerType={ContainerType.CenterBanner} backgroundColor={Color.silver}>
         <FontColor color={Color.darkGray}>
           <ElementSpacing>
             <TextCenter>
@@ -51,9 +49,9 @@ export default ({ work, nextWork }: Props) => {
             exercising design skills.
           </p>
         </FontColor>
-      </CenterBanner>
+      </Animator>
       <DoubleColumn>
-        <ContentSquare backgroundColor={work.color}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Branding</h2>
           </ElementSpacing>
@@ -65,8 +63,8 @@ export default ({ work, nextWork }: Props) => {
             professionalism to help users feel secure when making donations or importing their loan
             information.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/branding.png?webp`)}
@@ -74,11 +72,11 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/branding.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
 
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.silver}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.silver}>
           <FontColor color={Color.darkGray}>
             <ElementSpacing>
               <h2>Wireframes</h2>
@@ -92,8 +90,8 @@ export default ({ work, nextWork }: Props) => {
               quicker so I could move onto the development.
             </p>
           </FontColor>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/wireframes.png?webp`)}
@@ -101,11 +99,11 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/wireframes.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
 
       <DoubleColumn>
-        <ContentSquare backgroundColor={work.color}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Design Iterations</h2>
           </ElementSpacing>
@@ -115,8 +113,8 @@ export default ({ work, nextWork }: Props) => {
             also my first major project using Sketch so I was able to learn a lot about modern UI
             design processes.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/iterations.png?webp`)}
@@ -124,11 +122,11 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/iterations.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
 
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.silver}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.silver}>
           <FontColor color={Color.darkGray}>
             <ElementSpacing>
               <h2>Finished Designs</h2>
@@ -143,8 +141,8 @@ export default ({ work, nextWork }: Props) => {
               the app.
             </p>
           </FontColor>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/designs.png?webp`)}
@@ -152,13 +150,13 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/designs.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
 
       <SkillsBanner skills={work.skills} />
 
       <DoubleColumn>
-        <ContentSquare backgroundColor={work.color}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Code</h2>
           </ElementSpacing>
@@ -171,8 +169,8 @@ export default ({ work, nextWork }: Props) => {
             with GitHub's new project management tools to manage it all. I learned so much while
             building Eraise and that's exactly why I wanted to build it.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/code.png?webp`)}
@@ -180,11 +178,11 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/code.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
 
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.silver}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.silver}>
           <FontColor color={Color.darkGray}>
             <ElementSpacing>
               <h2>Infrastructure</h2>
@@ -198,8 +196,8 @@ export default ({ work, nextWork }: Props) => {
               Heroku for hosting. Overall I love the infrastructure that I came up with for Eraise.
             </p>
           </FontColor>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/eraise/infrastructure.png?webp`)}
@@ -207,9 +205,9 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/eraise/infrastructure.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-      <CenterBanner backgroundColor={Color.darkGray}>
+      <Animator containerType={ContainerType.CenterBanner} backgroundColor={Color.darkGray}>
         <ElementSpacing>
           <TextCenter>
             <h2>Results</h2>
@@ -224,7 +222,7 @@ export default ({ work, nextWork }: Props) => {
           useful resources to solve specific problems including Stripe, Plaid, Firebase
           Authentication, and Heroku to name a few.
         </p>
-      </CenterBanner>
+      </Animator>
 
       <DoubleColumn>
         <AllProjects />

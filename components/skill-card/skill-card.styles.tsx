@@ -26,7 +26,6 @@ export const Skill: any = styled(motion.li)((props: any) => [
     },
     ':last-of-type': {
       marginRight: 0,
-      marginBottom: 0,
     },
   },
 ]);

@@ -9,6 +9,7 @@ export const Root: any = styled.section(
       alignItems: 'center',
       justifyContent: 'center',
       padding: `${spaced(12)}px 0`,
+      overflow: 'hidden',
     },
   ],
   MediaQuery(BreakPoint.medium, {

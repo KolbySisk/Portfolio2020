@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Color, spaced, MediaQuery, BreakPoint } from '../../styles';
+import { spaced, MediaQuery, BreakPoint } from '../../styles';
 
 export const Root: any = styled.article((props: any) => [
   {
@@ -11,6 +11,7 @@ export const Root: any = styled.article((props: any) => [
     height: 0,
     paddingBottom: '33.333%',
     position: 'relative',
+    overflow: 'hidden',
   },
   MediaQuery(BreakPoint.medium, {
     width: '100%',

@@ -22,7 +22,6 @@ export const Skills: any = styled(motion.ul)({
   maxWidth: 800,
   li: {
     marginRight: spaced(1),
-    marginBottom: spaced(2),
     ':last-of-type': {
       marginRight: 0,
     },
