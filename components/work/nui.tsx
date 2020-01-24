@@ -1,5 +1,4 @@
 import { Color, ElementSpacing, FontColor, TextCenter } from '../../styles';
-import CenterBanner from '../center-banner';
 import SkillsBanner from '../skills-banner';
 import DoubleColumn from '../double-column';
 import WorkBanner from '../work-banner';

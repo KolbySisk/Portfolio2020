@@ -1,3 +1,4 @@
+import ReactPlayer from 'react-player';
 import { Color, ElementSpacing, FontColor, TextCenter } from '../../styles';
 import DoubleColumn from '../double-column';
 import SkillsBanner from '../skills-banner';
@@ -207,6 +208,15 @@ export default ({ work, nextWork }: Props) => {
           </picture>
         </Animator>
       </DoubleColumn>
+
+      <ReactPlayer
+        url="/images/work/eraise/video.mp4"
+        width="100%"
+        height="auto"
+        style={{ display: 'flex' }}
+        playing
+      />
+
       <Animator containerType={ContainerType.CenterBanner} backgroundColor={Color.darkGray}>
         <ElementSpacing>
           <TextCenter>
