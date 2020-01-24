@@ -29,6 +29,7 @@
     "react-icons": "^3.8.0",
     "react-scroll": "^1.7.16",
     "react-scroll-to": "^3.0.0-beta.3",
+    "react-visibility-sensor": "^5.1.1",
     "sal.js": "^0.7.1"
   },
   "devDependencies": {

@@ -1,19 +1,19 @@
-import { Color, DoubleColumn, ElementSpacing, FontColor, TextCenter } from '../../styles';
-import ContentSquare from '../content-square';
-import ImageSquare from '../image-square';
+import { Color, ElementSpacing, FontColor, TextCenter } from '../../styles';
 import CenterBanner from '../center-banner';
 import SkillsBanner from '../skills-banner';
+import DoubleColumn from '../double-column';
 import WorkBanner from '../work-banner';
 import AllProjects from '../all-projects';
 import NextProject from '../next-project';
 import Footer from '../footer';
+import Animator, { ContainerType } from '../animator';
 
 export default ({ work, nextWork }: Props) => {
   return (
     <>
       <WorkBanner work={work} />
       <DoubleColumn>
-        <ContentSquare backgroundColor={Color.darkGray}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.darkGray}>
           <ElementSpacing>
             <h2>About</h2>
           </ElementSpacing>
@@ -22,8 +22,9 @@ export default ({ work, nextWork }: Props) => {
             system. Coming into my role as one of only two engineers on the team I was immediately
             presented with challenging problems to solve. I was excited to say the least.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/nui/about.png?webp`)}
@@ -31,9 +32,10 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/nui/about.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-      <CenterBanner backgroundColor={Color.silver}>
+
+      <Animator containerType={ContainerType.CenterBanner} backgroundColor={Color.silver}>
         <FontColor color={Color.darkGray}>
           <ElementSpacing>
             <TextCenter>
@@ -47,9 +49,10 @@ export default ({ work, nextWork }: Props) => {
             to scope and architect the system accordingly.
           </p>
         </FontColor>
-      </CenterBanner>
+      </Animator>
+
       <DoubleColumn>
-        <ContentSquare backgroundColor={work.color}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Architecture</h2>
           </ElementSpacing>
@@ -60,8 +63,8 @@ export default ({ work, nextWork }: Props) => {
             and engineering efforts, we were able to architect an elegant solution given the
             requirements.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/nui/architecture.png?webp`)}
@@ -69,11 +72,10 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/nui/architecture.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.silver}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.silver}>
           <FontColor color={Color.darkGray}>
             <ElementSpacing>
               <h2>Leadership</h2>
@@ -85,8 +87,8 @@ export default ({ work, nextWork }: Props) => {
               time while gathering - and meeting - the business requirements.
             </p>
           </FontColor>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/nui/leadership.png?webp`)}
@@ -94,11 +96,10 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/nui/leadership.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-
       <DoubleColumn>
-        <ContentSquare backgroundColor={work.color}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Systems &amp; Processes</h2>
           </ElementSpacing>
@@ -110,8 +111,8 @@ export default ({ work, nextWork }: Props) => {
             processes while developing. I architected a governance system for scaling and growing
             NUI.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/nui/systems.png?webp`)}
@@ -119,13 +120,11 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/nui/systems.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-
       <SkillsBanner skills={work.skills} />
-
       <DoubleColumn reverse={true}>
-        <ContentSquare backgroundColor={Color.silver}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={Color.silver}>
           <FontColor color={Color.darkGray}>
             <ElementSpacing>
               <h2>Component Libraries</h2>
@@ -141,8 +140,8 @@ export default ({ work, nextWork }: Props) => {
               optimizations, unit tests, technical documentation and much more.
             </p>
           </FontColor>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/nui/components.png?webp`)}
@@ -150,11 +149,10 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/nui/components.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-
       <DoubleColumn>
-        <ContentSquare backgroundColor={work.color}>
+        <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
             <h2>Mentoring & teaching </h2>
           </ElementSpacing>
@@ -163,8 +161,8 @@ export default ({ work, nextWork }: Props) => {
             worked with developers and designers and provided guidance, advice, and constructive
             criticism. While doing so I learned that teaching is a great tool for learning.
           </p>
-        </ContentSquare>
-        <ImageSquare>
+        </Animator>
+        <Animator containerType={ContainerType.ImageSquare}>
           <picture>
             <source
               srcSet={require(`../../public/images/work/nui/teaching.png?webp`)}
@@ -172,10 +170,9 @@ export default ({ work, nextWork }: Props) => {
             />
             <img src={require(`../../public/images/work/nui/teaching.png`)} />
           </picture>
-        </ImageSquare>
+        </Animator>
       </DoubleColumn>
-
-      <CenterBanner backgroundColor={Color.darkGray}>
+      <Animator containerType={ContainerType.CenterBanner} backgroundColor={Color.darkGray}>
         <ElementSpacing>
           <TextCenter>
             <h2>Results</h2>
@@ -187,13 +184,11 @@ export default ({ work, nextWork }: Props) => {
           had at NCR is huge. Not only were we able to provide value to designers and developers
           with NUI, but we also cultivated an environment that encourages sharing and learning.
         </p>
-      </CenterBanner>
-
+      </Animator>
       <DoubleColumn>
         <AllProjects />
         <NextProject work={nextWork} />
       </DoubleColumn>
-
       <Footer />
     </>
   );

@@ -1,7 +1,7 @@
 import * as ContentSquaresStyles from './content-square.styles';
 import { Color } from '../../styles';
 
-const ContentSquare = ({ children, backgroundColor }) => {
+const ContentSquare = ({ children, backgroundColor }: Props) => {
   return (
     <ContentSquaresStyles.Root backgroundColor={backgroundColor}>
       <ContentSquaresStyles.ContentContainer>{children}</ContentSquaresStyles.ContentContainer>

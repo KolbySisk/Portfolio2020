@@ -1,4 +1,5 @@
-import { Color, DoubleColumn, ElementSpacing, FontColor, TextCenter } from '../../styles';
+import { Color, ElementSpacing, FontColor, TextCenter } from '../../styles';
+import DoubleColumn from '../double-column';
 import ContentSquare from '../content-square';
 import ImageSquare from '../image-square';
 import CenterBanner from '../center-banner';

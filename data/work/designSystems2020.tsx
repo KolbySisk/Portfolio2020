@@ -1,4 +1,5 @@
 import { Color } from '../../styles';
+import DS from '../../components/work/designsystems';
 
 export const DesignSystems2020 = {
   title: 'Design Systems In 2020',
@@ -6,4 +7,5 @@ export const DesignSystems2020 = {
   tags: ['Writing'],
   color: Color.blue,
   patternPath: 'work/eraise/pattern.png',
+  component: DS,
 };

@@ -15,8 +15,13 @@ const PageTransition = ({ children }: Props) => {
       {children}
 
       <PageTransitionStyles.Overlay
-        initial={{ transform: 'translateY(-292px)' }}
-        animate={{ transform: `translateY(${screenHeight}px)` }}
+        initial={{ transform: 'translateY(-292px)', display: 'flex' }}
+        animate={{
+          transform: `translateY(${screenHeight}px)`,
+          transitionEnd: {
+            display: 'none',
+          },
+        }}
         exit={{ transform: 'translateY(-292px)' }}
         transition={{ duration: 1, ease: [0.25, 0.8, 0.6, 1] }}>
         <PageTransitionStyles.Trees />

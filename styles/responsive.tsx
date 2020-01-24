@@ -1,5 +1,3 @@
-import styled from '@emotion/styled';
-
 /**
  * usage:
  * css({
@@ -16,11 +14,3 @@ export enum BreakPoint {
 const query = (bp: BreakPoint) => `@media (max-width: ${bp}px)`;
 
 export const MediaQuery = (bp: BreakPoint, styles: any) => ({ [query(bp)]: styles });
-
-export const DoubleColumn: any = styled.div((props: any) => [
-  {
-    display: 'flex',
-    flexDirection: props.reverse ? 'row-reverse' : 'row',
-  },
-  MediaQuery(BreakPoint.medium, { flexDirection: 'column' }),
-]);

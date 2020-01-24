@@ -87,7 +87,8 @@ const ScrollingSkills = ({ skills }: Props) => {
     containerElement?.addEventListener(
       'scroll',
       () => {
-        clearInterval(autoScrollingInterval);
+        // if hovering
+        if (autoScrollingPaused) clearInterval(autoScrollingInterval);
       },
       false
     );
