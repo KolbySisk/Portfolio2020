@@ -7,7 +7,7 @@ export const NuiData = {
   slug: 'nui',
   tags: ['Project'],
   color: Color.red,
-  patternPath: 'work/eraise/pattern.png',
+  patternPath: 'work/nui/pattern.png',
   skills: [
     AllSkills.angular,
     AllSkills.typescript,

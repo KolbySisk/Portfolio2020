@@ -48,7 +48,7 @@ const WorkLink = ({ work }: Props) => {
           <WorkLinkStyles.Work
             ref={containerRef}
             color={work.color}
-            patternPath={work.patternName || 'work/eraise/pattern.png'}
+            patternPath={work.patternPath}
             animate={controls}
             initial={{ backgroundPositionX: '0px' }}
             exit={{}}

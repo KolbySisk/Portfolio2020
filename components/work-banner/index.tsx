@@ -6,7 +6,7 @@ const WorkBanner = ({ work }: Props) => {
     <AnimatePresence>
       <WorkBannerStyles.Work
         color={work.color}
-        patternPath={work.patternName || 'work/eraise/pattern.png'}
+        patternPath={work.patternPath}
         initial={{ backgroundPositionX: '0px' }}
         animate={{ backgroundPositionX: '-5000px' }}
         exit={{}}
