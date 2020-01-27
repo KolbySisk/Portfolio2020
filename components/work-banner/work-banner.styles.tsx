@@ -16,11 +16,9 @@ export const Work: any = styled(motion.div)((props: any) => {
       alignItems: 'center',
       padding: `0 ${spaced(4)}px`,
       backgroundColor: props.color,
-      textShadow: `0 2px 4px rgba(0,0,0,.5)`,
+      textShadow: `0 2px 4px rgba(0,0,0,.3)`,
       textAlign: 'center',
       backgroundImage: `url(${bgImage})`,
-      '-webkit-transform': 'translate3d(0,0,0)',
-      '-webkit-backface-visibility': 'hidden',
     },
   ];
 });

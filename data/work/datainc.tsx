@@ -8,6 +8,7 @@ export const DataIncData = {
   tags: ['Project'],
   color: Color.red,
   patternPath: 'work/eraise/pattern.png',
+  patternLightPath: 'work/eraise/pattern-light.png',
   skills: [
     AllSkills.angular,
     AllSkills.react,

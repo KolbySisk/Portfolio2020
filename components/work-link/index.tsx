@@ -49,6 +49,7 @@ const WorkLink = ({ work }: Props) => {
             ref={containerRef}
             color={work.color}
             patternPath={work.patternPath}
+            patternLightPath={work.patternLightPath}
             animate={controls}
             initial={{ backgroundPositionX: '0px' }}
             exit={{}}

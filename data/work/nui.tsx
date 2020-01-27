@@ -8,6 +8,7 @@ export const NuiData = {
   tags: ['Project'],
   color: Color.red,
   patternPath: 'work/nui/pattern.png',
+  patternLightPath: 'work/nui/pattern-light.png',
   skills: [
     AllSkills.angular,
     AllSkills.typescript,

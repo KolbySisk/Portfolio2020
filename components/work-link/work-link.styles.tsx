@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import { Constant, TitleFont, spaced } from '../../styles';
+import { TitleFont, spaced } from '../../styles';
 import { motion } from 'framer-motion';
 
 export const Work: any = styled(motion.a)((props: any) => {
-  const bgImage = require(`../../public/images/${props.patternPath}?webp`);
+  const bgImage = require(`../../public/images/${props.patternLightPath}?webp`);
 
   return [
     TitleFont,
@@ -16,12 +16,9 @@ export const Work: any = styled(motion.a)((props: any) => {
       alignItems: 'center',
       padding: `0 ${spaced(4)}px`,
       backgroundColor: props.color,
-      textShadow: `0 2px 2px rgba(0,0,0,.6), 0 2px 30px rgba(0,0,0,.4)`,
+      textShadow: `0 2px 2px rgba(0,0,0,.4), 0 2px 30px rgba(0,0,0,.2)`,
       letterSpacing: '1px',
       backgroundImage: `url(${bgImage})`,
-      backgroundBlendMode: 'soft-light',
-      '-webkit-transform': 'translate3d(0,0,0)',
-      '-webkit-backface-visibility': 'hidden',
     },
   ];
 });

@@ -8,6 +8,7 @@ export const EraiseData = {
   tags: ['Project'],
   color: Color.purp,
   patternPath: 'work/eraise/pattern.png',
+  patternLightPath: 'work/eraise/pattern-light.png',
   skills: [
     AllSkills.nextjs,
     AllSkills.typescript,
