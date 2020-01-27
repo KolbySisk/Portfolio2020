@@ -5,7 +5,7 @@ export interface Data {
   intro: string;
   work: any;
   skills: Skills;
-  socialLinks: any;
+  socialLinks: any[];
   tags: string[];
 }
 
@@ -18,7 +18,28 @@ const data: Data = {
   work: work,
   tags: uniqueTags,
   skills: AllSkills,
-  socialLinks: [],
+  socialLinks: [
+    {
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/kolbysisk/',
+    },
+    {
+      title: 'Twitter',
+      url: 'https://twitter.com/kolbysisk',
+    },
+    {
+      title: 'Medium',
+      url: 'https://medium.com/@kolbysisk/',
+    },
+    {
+      title: 'Stack Overflow',
+      url: 'https://stackoverflow.com/users/1933563/kolby',
+    },
+    {
+      title: 'GitHub',
+      url: 'https://github.com/KolbySisk',
+    },
+  ],
 };
 
 export default data;

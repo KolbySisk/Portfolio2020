@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Gradient, spaced, MediaQuery, BreakPoint } from '../../styles';
+import { Gradient, spaced, MediaQuery, BreakPoint, Color } from '../../styles';
 
 const bgImage = require('../../public/images/trees.png?webp');
 
@@ -45,4 +45,15 @@ export const Intro: any = styled.p([
     fontSize: 20,
     lineHeight: '26px',
   }),
+]);
+
+export const SocialLinks: any = styled.div([{ marginTop: spaced(4) }]);
+export const SocialLink: any = styled.a([
+  {
+    marginRight: spaced(3),
+    whiteSpace: 'nowrap',
+    ':hover': {
+      color: Color.green,
+    },
+  },
 ]);

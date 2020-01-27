@@ -1,6 +1,7 @@
+import { FaLink } from 'react-icons/fa';
 import * as IntroductionStyles from './introduction.styles';
 
-const Introduction = ({ intro }: Props) => {
+const Introduction = ({ intro, socialLinks }: Props) => {
   return (
     <IntroductionStyles.Root>
       <IntroductionStyles.IntroContainer>
@@ -11,6 +12,13 @@ const Introduction = ({ intro }: Props) => {
         />
         <IntroductionStyles.LogoText>Kolby Sisk</IntroductionStyles.LogoText>
         <IntroductionStyles.Intro>{intro}</IntroductionStyles.Intro>
+        <IntroductionStyles.SocialLinks>
+          {socialLinks.map(link => (
+            <IntroductionStyles.SocialLink key={link.title} href={link.url}>
+              <FaLink style={{ fontSize: 12 }} /> {link.title}
+            </IntroductionStyles.SocialLink>
+          ))}
+        </IntroductionStyles.SocialLinks>
       </IntroductionStyles.IntroContainer>
     </IntroductionStyles.Root>
   );
@@ -18,6 +26,7 @@ const Introduction = ({ intro }: Props) => {
 
 interface Props {
   intro: string;
+  socialLinks: any[];
 }
 
 export default Introduction;

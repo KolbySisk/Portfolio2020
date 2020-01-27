@@ -17,7 +17,7 @@ const Home = () => (
 
     <Columns>
       <IntroColumn>
-        <IntroductionSection intro={Data.intro} />
+        <IntroductionSection intro={Data.intro} socialLinks={Data.socialLinks} />
         <SkillsSection skills={Data.skills} />
       </IntroColumn>
       <WorkColumn>
