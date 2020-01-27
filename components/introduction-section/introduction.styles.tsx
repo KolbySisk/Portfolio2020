@@ -52,6 +52,7 @@ export const SocialLink: any = styled.a([
   {
     marginRight: spaced(3),
     whiteSpace: 'nowrap',
+    display: 'inline-block',
     ':hover': {
       color: Color.green,
     },

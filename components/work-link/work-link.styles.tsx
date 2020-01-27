@@ -20,9 +20,6 @@ export const Work: any = styled(motion.a)((props: any) => {
       letterSpacing: '1px',
       backgroundImage: `url(${bgImage})`,
       backgroundBlendMode: 'soft-light',
-      ':hover': {
-        backgroundBlendMode: 'unset',
-      },
     },
   ];
 });

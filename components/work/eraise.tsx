@@ -209,14 +209,16 @@ export default ({ work, nextWork }: Props) => {
         </Animator>
       </DoubleColumn>
 
-      <ReactPlayer
-        url="/images/work/eraise/video.mp4"
-        width="100%"
-        height="auto"
-        style={{ display: 'flex' }}
-        loop={true}
-        playing
-      />
+      <div style={{ width: '100%', height: 'auto' }}>
+        <ReactPlayer
+          url="/images/work/eraise/video.mp4"
+          width="100%"
+          height="100%"
+          style={{ display: 'flex' }}
+          loop={true}
+          playing
+        />
+      </div>
 
       <Animator containerType={ContainerType.CenterBanner} backgroundColor={Color.darkGray}>
         <ElementSpacing>

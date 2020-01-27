@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Constant, TitleFont, spaced } from '../../styles';
+import { TitleFont, spaced } from '../../styles';
 import { motion } from 'framer-motion';
 
 export const Work: any = styled(motion.div)((props: any) => {
@@ -11,7 +11,7 @@ export const Work: any = styled(motion.div)((props: any) => {
       width: '100%',
       height: spaced(36),
       fontSize: '36px',
-      lineHeight: '40px',
+      lineHeight: '60px',
       display: 'flex',
       alignItems: 'center',
       padding: `0 ${spaced(4)}px`,
