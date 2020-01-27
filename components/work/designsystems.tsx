@@ -23,18 +23,19 @@ export default ({ work, nextWork }: Props) => {
               exciting time to be part of a design system team, but with the booming changes of the
               landscape, it can be a daunting project.
             </p>
-            <picture>
-              <source
-                srcSet={require(`../../public/images/work/designsystems2020/design-system-diagram.png?webp`)}
-                type="image/webp"
-              />
-              <img
-                src={require(`../../public/images/work/designsystems2020/design-system-diagram.png`)}
-              />
-            </picture>
             <a
               style={{ display: 'inline-block', padding: '24px 0 0 0' }}
               href="https://medium.com/@kolbysisk/the-state-of-design-systems-in-2020-d8f580c54b39">
+              <picture>
+                <source
+                  srcSet={require(`../../public/images/work/designsystems2020/design-system-diagram.png?webp`)}
+                  type="image/webp"
+                />
+                <img
+                  style={{ marginBottom: 16 }}
+                  src={require(`../../public/images/work/designsystems2020/design-system-diagram.png`)}
+                />
+              </picture>
               <FaLink style={{ fontSize: 14, marginRight: 8 }} />
               Check out the full article on Medium.
             </a>
