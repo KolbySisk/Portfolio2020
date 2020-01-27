@@ -12,6 +12,8 @@ export const NuiData = {
     AllSkills.angular,
     AllSkills.typescript,
     AllSkills.react,
+    AllSkills.jasmine,
+    AllSkills.karma,
     AllSkills.storybook,
     AllSkills.dotnetcore,
     AllSkills.jenkins,
