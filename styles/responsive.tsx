@@ -1,3 +1,5 @@
+import styled from '@emotion/styled';
+
 /**
  * usage:
  * css({
@@ -14,3 +16,11 @@ export enum BreakPoint {
 const query = (bp: BreakPoint) => `@media (max-width: ${bp}px)`;
 
 export const MediaQuery = (bp: BreakPoint, styles: any) => ({ [query(bp)]: styles });
+
+export const Container: any = styled.div({
+  width: '100%',
+  maxWidth: '996px',
+  padding: '0 32px',
+  margin: '0 auto',
+  boxSizing: 'border-box',
+});
