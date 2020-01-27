@@ -7,7 +7,7 @@ export const CorkcicleData = {
   slug: 'corkcicle',
   tags: ['Project'],
   color: Color.green,
-  patternPath: 'work/eraise/pattern.png',
+  patternPath: 'work/corkcicle/pattern.png',
   skills: [AllSkills.shopify, AllSkills.jquery, AllSkills.ps, AllSkills.illustrator],
   component: Corkcicle,
 };

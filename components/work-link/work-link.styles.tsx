@@ -16,8 +16,13 @@ export const Work: any = styled(motion.a)((props: any) => {
       alignItems: 'center',
       padding: `0 ${spaced(4)}px`,
       backgroundColor: props.color,
-      textShadow: `0 2px 2px rgba(0,0,0, .6)`,
+      textShadow: `0 2px 2px rgba(0,0,0,.6), 0 2px 30px rgba(0,0,0,.4)`,
+      letterSpacing: '1px',
       backgroundImage: `url(${bgImage})`,
+      backgroundBlendMode: 'soft-light',
+      ':hover': {
+        backgroundBlendMode: 'unset',
+      },
     },
   ];
 });

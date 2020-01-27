@@ -6,6 +6,6 @@ export const DesignSystems2020 = {
   slug: 'design-systems-in-2020',
   tags: ['Writing'],
   color: Color.blue,
-  patternPath: 'work/eraise/pattern.png',
+  patternPath: 'work/designsystems2020/pattern.png',
   component: DS,
 };
