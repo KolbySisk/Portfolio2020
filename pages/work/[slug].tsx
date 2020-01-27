@@ -12,7 +12,7 @@ const WorkPage = () => {
   return (
     <>
       <Head>
-        <title>Kolby Sisk - Software engineer</title>
+        <title>Kolby Sisk - {work?.title}</title>
       </Head>
 
       {work?.component && <work.component work={work} nextWork={nextWork} />}

@@ -8,6 +8,14 @@ export const CorkcicleData = {
   tags: ['Project'],
   color: Color.green,
   patternPath: 'work/corkcicle/pattern.png',
-  skills: [AllSkills.shopify, AllSkills.jquery, AllSkills.ps, AllSkills.illustrator],
+  skills: [
+    AllSkills.shopify,
+    AllSkills.jquery,
+    AllSkills.ps,
+    AllSkills.illustrator,
+    AllSkills.googleanalytics,
+    AllSkills.googletagmanager,
+    AllSkills.dns,
+  ],
   component: Corkcicle,
 };
