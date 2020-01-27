@@ -20,6 +20,8 @@ export const Work: any = styled(motion.a)((props: any) => {
       letterSpacing: '1px',
       backgroundImage: `url(${bgImage})`,
       backgroundBlendMode: 'soft-light',
+      '-webkit-transform': 'translate3d(0,0,0)',
+      '-webkit-backface-visibility': 'hidden',
     },
   ];
 });

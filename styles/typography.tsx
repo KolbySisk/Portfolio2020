@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { css } from '@emotion/core';
 import { Color } from './color';
 import styled from '@emotion/styled';
