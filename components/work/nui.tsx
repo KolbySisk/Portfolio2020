@@ -18,8 +18,9 @@ export default ({ work, nextWork }: Props) => {
           </ElementSpacing>
           <p>
             For the last 2.5 years I’ve been working at NCR on a team that builds NUI - NCR’s design
-            system. Coming into my role as one of only two engineers on the team I was immediately
-            presented with challenging problems to solve. I was excited to say the least.
+            system. Coming into my role as one of only two engineers on the team, and I was
+            immediately presented with challenging problems to solve. I was excited to say the
+            least.
           </p>
         </Animator>
 
@@ -103,12 +104,11 @@ export default ({ work, nextWork }: Props) => {
             <h2>Systems &amp; Processes</h2>
           </ElementSpacing>
           <p>
-            When I joined NCR the NUI team was still in its infancy. The supporting systems needed
-            for NUI were not developed. My first tasks was to develop these systems. I created
-            systems for documenting team knowledge like server info, team processes, project
-            information. I engineered a CI/CD process for NUI that helped to automate various devops
-            processes while developing. I architected a governance system for scaling and growing
-            NUI.
+            When I joined NCR the NUI team was still in its infancy. The infrastructure needed for
+            NUI were not developed. My first tasks was to develop these systems. I created systems
+            for documenting team knowledge, team processes, project information. I engineered a
+            CI/CD process that helped to automate various DevOps processes while developing. I
+            architected a governance system for scaling and growing NUI.
           </p>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
@@ -129,12 +129,12 @@ export default ({ work, nextWork }: Props) => {
               <h2>Component Libraries</h2>
             </ElementSpacing>
             <p>
-              With the supporting development systems in place I started the next large effort -
-              building my first component library. The goal was to make a library containing Angular
+              With the supporting infrastructure in place I started the next large effort - building
+              my first component library. The goal was to make a library containing Angular
               components that could easily be used throughout NCR. The scope was large, but I
               enjoyed the process and learn a ton. I started by digging through Google’s Angular
               Material code, then I dug through Angular’s code. I learned Angular inside and out
-              along with the best practices for creating angular component libraries. Then I
+              along with the best practices for creating Angular component libraries. Then I
               architected and built the component library. I implemented accessibility solutions,
               optimizations, unit tests, technical documentation and much more.
             </p>
