@@ -49,6 +49,7 @@ export const SkillTitle: any = styled.div((props: any) => [
     fontSize: 10,
     padding: spaced(1 / 2),
     lineHeight: '14px',
+    whiteSpace: 'normal',
   },
 ]);
 
