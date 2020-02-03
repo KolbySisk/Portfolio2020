@@ -1,4 +1,3 @@
-import ReactPlayer from 'react-player';
 import { Color, ElementSpacing, FontColor, TextCenter } from '../../styles';
 import DoubleColumn from '../double-column';
 import SkillsBanner from '../skills-banner';

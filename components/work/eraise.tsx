@@ -216,7 +216,8 @@ export default ({ work, nextWork }: Props) => {
           height="100%"
           style={{ display: 'flex' }}
           loop={true}
-          playing
+          playing={false}
+          controls={true}
         />
       </div>
 
