@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Gradient, spaced, MediaQuery, BreakPoint, Color } from '../../styles';
 
-const bgImage = require('../../public/images/trees.png?webp');
+const bgImage = require('../../public/images/trees.png?webp&size=710');
 
 export const Root: any = styled.section([Gradient.redToBlue]);
 

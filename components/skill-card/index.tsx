@@ -15,10 +15,10 @@ const SkillCard = ({ skill }: Props) => {
       <SkillCardStyles.SkillTitle className="skill-title">{skill.title}</SkillCardStyles.SkillTitle>
       <picture>
         <source
-          srcSet={require(`../../public/images/tech-logos/${skill.imageName}?webp`)}
+          srcSet={require(`../../public/images/tech-logos/${skill.imageName}?webp&size=128`)}
           type="image/webp"
         />
-        <img src={require(`../../public/images/tech-logos/${skill.imageName}`)} />
+        <img src={require(`../../public/images/tech-logos/${skill.imageName}?size=128`)} />
       </picture>
     </SkillCardStyles.Skill>
   );
