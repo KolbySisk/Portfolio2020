@@ -1,6 +1,5 @@
 import { Color } from '../../styles';
 import { AllSkills } from '../skills';
-import Nui from '../../components/work/nui';
 
 export const NuiData = {
   title: 'NUI',
@@ -27,5 +26,4 @@ export const NuiData = {
     AllSkills.branding,
     AllSkills.ux,
   ],
-  component: Nui,
 };

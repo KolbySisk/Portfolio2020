@@ -1,6 +1,5 @@
 import { Color } from '../../styles';
 import { AllSkills } from '../skills';
-import Corkcicle from '../../components/work/corkcicle';
 
 export const CorkcicleData = {
   title: 'Corkcicle',
@@ -18,5 +17,4 @@ export const CorkcicleData = {
     AllSkills.googletagmanager,
     AllSkills.dns,
   ],
-  component: Corkcicle,
 };

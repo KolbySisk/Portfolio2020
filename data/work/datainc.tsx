@@ -1,6 +1,5 @@
 import { Color } from '../../styles';
 import { AllSkills } from '../skills';
-import DataInc from '../../components/work/datainc';
 
 export const DataIncData = {
   title: 'The Data Inc. Saga',
@@ -21,5 +20,4 @@ export const DataIncData = {
     AllSkills.azure,
     AllSkills.subversion,
   ],
-  component: DataInc,
 };

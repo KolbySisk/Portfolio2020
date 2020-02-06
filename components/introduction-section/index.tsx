@@ -14,7 +14,7 @@ const Introduction = ({ intro, socialLinks }: Props) => {
         <IntroductionStyles.Intro>{intro}</IntroductionStyles.Intro>
         <IntroductionStyles.SocialLinks>
           {socialLinks.map(link => (
-            <IntroductionStyles.SocialLink key={link.title} href={link.url}>
+            <IntroductionStyles.SocialLink key={link.title} href={link.url} target="_blank">
               <FaLink style={{ fontSize: 12 }} /> {link.title}
             </IntroductionStyles.SocialLink>
           ))}

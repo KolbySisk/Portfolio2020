@@ -1,6 +1,5 @@
 import { Color } from '../../styles';
 import { AllSkills } from '../skills';
-import Eraise from '../../components/work/eraise';
 
 export const EraiseData = {
   title: 'Eraise',
@@ -33,5 +32,4 @@ export const EraiseData = {
     AllSkills.ux,
     AllSkills.ui,
   ],
-  component: Eraise,
 };
