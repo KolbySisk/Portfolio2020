@@ -35,7 +35,7 @@ export default () => {
             </p>
           </ElementSpacing>
 
-          <a href="https://eraise.loans" style={{ display: 'inline-block' }} target="_blank">
+          <a href="https://www.eraise.loans" style={{ display: 'inline-block' }} target="_blank">
             <FaLink style={{ fontSize: 12 }} /> View live project
           </a>
         </Animator>
