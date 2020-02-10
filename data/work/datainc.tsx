@@ -6,8 +6,8 @@ export const DataIncData = {
   slug: 'data-inc',
   tags: ['Project'],
   color: Color.red,
-  patternPath: 'work/eraise/pattern.png',
-  patternLightPath: 'work/eraise/pattern-light.png',
+  patternPath: 'work/designsystems2020/pattern.png',
+  patternLightPath: 'work/designsystems2020/pattern-light.png',
   skills: [
     AllSkills.angular,
     AllSkills.react,

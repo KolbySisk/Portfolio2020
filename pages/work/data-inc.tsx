@@ -34,13 +34,13 @@ export default () => {
         </Animator>
 
         <Animator containerType={ContainerType.ImageSquare}>
-          {/* <picture>
+          <picture>
             <source
-              srcSet={require(`../../public/images/work/nui/about.png?webp`)}
+              srcSet={require(`../../public/images/work/data-inc/about.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/nui/about.png`)} />
-          </picture> */}
+            <img src={require(`../../public/images/work/data-inc/about.png`)} />
+          </picture>
         </Animator>
       </DoubleColumn>
 
@@ -79,13 +79,13 @@ export default () => {
           </a>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
-          {/* <picture>
+          <picture>
             <source
-              srcSet={require(`../../public/images/work/nui/architecture.png?webp`)}
+              srcSet={require(`../../public/images/work/data-inc/cemm-tv.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/nui/architecture.png`)} />
-          </picture> */}
+            <img src={require(`../../public/images/work/data-inc/cemm-tv.png`)} />
+          </picture>
         </Animator>
       </DoubleColumn>
       <DoubleColumn reverse={true}>
@@ -111,13 +111,13 @@ export default () => {
           </FontColor>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
-          {/* <picture>
+          <picture>
             <source
-              srcSet={require(`../../public/images/work/nui/leadership.png?webp`)}
+              srcSet={require(`../../public/images/work/data-inc/cat.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/nui/leadership.png`)} />
-          </picture> */}
+            <img src={require(`../../public/images/work/data-inc/cat.png`)} />
+          </picture>
         </Animator>
       </DoubleColumn>
       <DoubleColumn>
@@ -139,13 +139,13 @@ export default () => {
           </a>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
-          {/* <picture>
+          <picture>
             <source
-              srcSet={require(`../../public/images/work/nui/systems.png?webp`)}
+              srcSet={require(`../../public/images/work/data-inc/4a0x1.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/nui/systems.png`)} />
-          </picture> */}
+            <img src={require(`../../public/images/work/data-inc/4a0x1.png`)} />
+          </picture>
         </Animator>
       </DoubleColumn>
       <SkillsBanner skills={work.skills} />
@@ -171,13 +171,13 @@ export default () => {
           </FontColor>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
-          {/* <picture>
+          <picture>
             <source
-              srcSet={require(`../../public/images/work/nui/components.png?webp`)}
+              srcSet={require(`../../public/images/work/data-inc/servsafe.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/nui/components.png`)} />
-          </picture> */}
+            <img src={require(`../../public/images/work/data-inc/servsafe.png`)} />
+          </picture>
         </Animator>
       </DoubleColumn>
       <DoubleColumn>
@@ -200,13 +200,13 @@ export default () => {
           </a>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
-          {/* <picture>
+          <picture>
             <source
-              srcSet={require(`../../public/images/work/nui/teaching.png?webp`)}
+              srcSet={require(`../../public/images/work/data-inc/nrashow.png?webp`)}
               type="image/webp"
             />
-            <img src={require(`../../public/images/work/nui/teaching.png`)} />
-          </picture> */}
+            <img src={require(`../../public/images/work/data-inc/nrashow.png`)} />
+          </picture>
         </Animator>
       </DoubleColumn>
 
