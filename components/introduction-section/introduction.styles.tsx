@@ -15,9 +15,13 @@ export const IntroContainer: any = styled.section([
     backgroundImage: `url(${bgImage})`,
     backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat',
+    backgroundSize: '100%',
   },
   MediaQuery(BreakPoint.medium, {
     flexDirection: 'column',
+  }),
+  MediaQuery(BreakPoint.small, {
+    backgroundSize: 'auto',
   }),
 ]);
 
