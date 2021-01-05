@@ -16,7 +16,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "@slack/web-api": "^5.7.0",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "framer-motion": "^1.7.0",
     "imagemin-mozjpeg": "^8.0.0",
