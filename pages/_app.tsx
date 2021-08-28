@@ -2,7 +2,6 @@ import React from 'react';
 import App from 'next/app';
 import Router from 'next/router';
 import { AnimatePresence } from 'framer-motion';
-import PageTransition from '../components/page-transition';
 
 class MyApp extends App {
   render() {
@@ -10,16 +9,14 @@ class MyApp extends App {
 
     return (
       <AnimatePresence exitBeforeEnter>
-        <PageTransition key={router.route}>
-          <Component {...pageProps} />
-        </PageTransition>
+        <Component {...pageProps} />
       </AnimatePresence>
     );
   }
 }
 
 // Google analytics event
-Router.events.on('routeChangeComplete', url => {
+Router.events.on('routeChangeComplete', (url) => {
   // @ts-ignore
   window.gtag('config', 'UA-156696606-1', {
     page_path: url,
