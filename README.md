@@ -15,17 +15,26 @@ https://kolbysisk.com
 - `npm i`
 - `npm run dev`
 
-## Topics to write about
+## New projects to add
 
-- Setting up a Next project: file structure, styled components, configs
-- Styling system
-- Optimizing images
+- Walmart saga
+- Thriver
+- Hubel?
 
-### Page transitions in Next with Framer Motion
+## Stuff to write about
 
-- exitBeforeEnter
-- child needs key
-- must use `<Link>`
-- `<Link>` must have `as` if using dynamic routes
-- Page will use first transition to determine time to pause while exiting
-- Integrating with Styled Components
+- Generating a static doc site using OpenAPI
+- Automating a GraphQL Gateway
+
+## New skills to add
+
+- GraphQL
+- Prisma
+- Kafka
+- Splunk
+- GraphQL Nexus
+- Tailwindcss
+- yjs
+- msw
+- cypress
+- jest

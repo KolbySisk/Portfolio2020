@@ -23,10 +23,9 @@ export default () => {
             <h2>About</h2>
           </ElementSpacing>
           <p>
-            For the last 2.5 years I’ve been working at NCR on a team that builds NUI - NCR’s design
-            system. Coming into my role as one of only two engineers on the team, and I was
-            immediately presented with challenging problems to solve. I was excited to say the
-            least.
+            From 2017 to 2020 I worked at NCR on a team that builds NUI - NCR’s design system.
+            Coming into my role as one of only two engineers on the team I was immediately presented
+            with challenging problems to solve.
           </p>
         </Animator>
 
@@ -64,10 +63,10 @@ export default () => {
           </ElementSpacing>
           <p>
             I worked with a small team dedicated to building the design system. We architected a
-            slim, scalable system able to meet the needs of a fortune 500 tech company with software
-            on everything from an atm machine to movie ticket kiosk. Utilizing open source solutions
-            and engineering efforts, we were able to architect an elegant solution given the
-            requirements.
+            slim and scalable system able to meet the needs of a fortune 500 tech company with
+            software on everything from an atm machine to movie ticket kiosk. Utilizing open source
+            solutions and engineering efforts, we were able to architect an elegant solution given
+            the requirements.
           </p>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
@@ -112,9 +111,9 @@ export default () => {
           <p>
             When I joined NCR the NUI team was still in its infancy. The infrastructure needed for
             NUI were not developed. My first tasks was to develop these systems. I created systems
-            for documenting team knowledge, team processes, project information. I engineered a
-            CI/CD process that helped to automate various DevOps processes while developing. I
-            architected a governance system for scaling and growing NUI.
+            for documenting team knowledge, team processes, and project information. I engineered a
+            CI/CD process that helped to automate various DevOps processes. I architected a
+            governance system for scaling and growing NUI.
           </p>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
@@ -159,12 +158,12 @@ export default () => {
       <DoubleColumn>
         <Animator containerType={ContainerType.ContentSquare} backgroundColor={work.color}>
           <ElementSpacing>
-            <h2>Mentoring & teaching </h2>
+            <h2>Mentoring &amp; Teaching </h2>
           </ElementSpacing>
           <p>
-            When I wasn’t working directly on NUI I was mentoring people throughout the NCR. I
-            worked with developers and designers and provided guidance, advice, and constructive
-            criticism. While doing so I learned that teaching is a great tool for learning.
+            When I wasn’t working on NUI I was mentoring people throughout NCR. I worked with
+            developers and designers and provided guidance, advice, and constructive criticism.
+            While doing so I learned that teaching is a great tool for learning.
           </p>
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
@@ -185,9 +184,8 @@ export default () => {
         </ElementSpacing>
         <p>
           During my time at NCR I was able to accomplish and learn so much more than I dreamed
-          possible. My team and I were able to build the design system NCR needed. The impact NUI
-          had at NCR is huge. Not only were we able to provide value to designers and developers
-          with NUI, but we also cultivated an environment that encourages sharing and learning.
+          possible. My team and I were able to build the design system NCR needed, which ultimately
+          provide value to designers, developers, and - mostly importantly - NCR.
         </p>
       </Animator>
       <DoubleColumn>
