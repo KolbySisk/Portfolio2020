@@ -12,6 +12,7 @@ export const Logo: any = styled.div([
     padding: spaced(6),
     boxSizing: 'content-box',
     svg: {
+      cursor: 'pointer',
       height: spaced(5),
     },
   },

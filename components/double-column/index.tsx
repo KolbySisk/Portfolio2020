@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 import { MediaQuery, BreakPoint } from '../../styles';
 
 const DoubleColumn: any = styled.div((props: any) => [

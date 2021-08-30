@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import * as WorkStyles from './work.styles';
 import Tag from '../tag';
@@ -8,8 +8,11 @@ import { AnimatePresence } from 'framer-motion';
 const Work = ({ work, tags }: Props) => {
   const [selectedTag, setSelectedTag] = useState();
   const [scrolled, setScrolled] = useState(false);
+  const workFilteredByTag = useMemo(() => {
+    return !selectedTag ? work : work.filter((w) => w.tags.includes(selectedTag));
+  }, [selectedTag]);
 
-  const container = {
+  const containerAnimation = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
       opacity: 1,
@@ -22,11 +25,6 @@ const Work = ({ work, tags }: Props) => {
     },
   };
 
-  const getWorkByTag = () => {
-    if (!selectedTag) return work;
-    return work.filter(w => w.tags.includes(selectedTag));
-  };
-
   return (
     <WorkStyles.Root>
       <WorkStyles.Header>
@@ -34,7 +32,7 @@ const Work = ({ work, tags }: Props) => {
         <WorkStyles.Tags>
           {tags.map((tag: string) => (
             <Tag
-              tagClicked={tag => setSelectedTag(tag === selectedTag ? undefined : tag)}
+              tagClicked={(tag) => setSelectedTag(tag === selectedTag ? undefined : tag)}
               key={tag}
               tag={tag}
               active={selectedTag === tag}
@@ -48,12 +46,14 @@ const Work = ({ work, tags }: Props) => {
 
       <AnimatePresence>
         <WorkStyles.Works
-          onScroll={() => setScrolled(true)}
-          variants={container}
+          onScroll={() => {
+            if (!scrolled) setScrolled(true);
+          }}
+          variants={containerAnimation}
           initial="hidden"
           animate="visible"
           exit="hidden">
-          {getWorkByTag().map((work: any) => (
+          {workFilteredByTag.map((work: any) => (
             <WorkLink key={work.slug} work={work} />
           ))}
         </WorkStyles.Works>

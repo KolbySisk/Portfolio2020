@@ -6,7 +6,6 @@ import IntroductionSection from '../components/introduction-section';
 import SkillsSection from '../components/skills-section';
 import WorkSection from '../components/work-section';
 import ContactSection from '../components/contact-section';
-
 import { BreakPoint, MediaQuery } from '../styles/responsive';
 
 const Home = () => (

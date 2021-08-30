@@ -1,5 +1,4 @@
 import * as AllProjectsStyles from './all-projects.styles';
-import { Color } from '../../styles';
 import Link from 'next/link';
 
 const AllProjects = () => {

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Color, spaced, TitleFont, MediaQuery, BreakPoint } from '../../styles';
+import { Color, spaced, MediaQuery, BreakPoint } from '../../styles';
 import { keyframes } from '@emotion/core';
 import { motion } from 'framer-motion';
 

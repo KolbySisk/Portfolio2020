@@ -1,5 +1,4 @@
 import * as NextProjectStyles from './next-project.styles';
-import { Color } from '../../styles';
 import Link from 'next/link';
 
 const NextProject = ({ work }: Props) => {
