@@ -10,7 +10,6 @@ export const Link: any = styled(motion.a)((props: any) => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: `0 ${spaced(4)}px`,
       height: spaced(30),
       backgroundColor: props.backgroundColor ? props.backgroundColor : Color.black,
       flex: 1,

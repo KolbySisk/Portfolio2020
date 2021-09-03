@@ -6,9 +6,6 @@ export const ResetStyles = css({
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
   },
-  '::selection': {
-    background: '#ffcb5c',
-  },
   html: {
     boxSizing: 'border-box',
   },
@@ -35,8 +32,10 @@ export const ResetStyles = css({
     cursor: 'pointer',
     border: 'none',
     lineHeight: 'normal',
-    textDecoration: 'none',
+    textDecoration: 'inherit',
     color: 'inherit',
+    fontSize: 'inherit',
+    fontWeight: 'inherit',
   },
   input: {
     border: 'none',

@@ -1,18 +1,16 @@
 import styled from '@emotion/styled';
-import { BreakPoint, MediaQuery, Color, spaced } from '../../styles';
+import { BreakPoint, MediaQuery, spaced } from '../../styles';
 
 export const Root: any = styled.footer();
 
 export const Logo: any = styled.div([
   {
     display: 'flex',
-    width: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: spaced(6),
+    padding: spaced(4),
     boxSizing: 'content-box',
     svg: {
-      cursor: 'pointer',
       height: spaced(5),
     },
   },

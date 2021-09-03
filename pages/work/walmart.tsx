@@ -211,8 +211,12 @@ export default () => {
             manually would produce a mountain of maintenance. I figured there must be a solution to
             automate this using OpenAPI, so I started researching. I quickly came across an IBM
             maintained projected called{' '}
-            <a href="https://github.com/IBM/openapi-to-graphql">openapi-to-graphql</a>. I put
-            together a quick POC and to my surprise it worked seamlessly. After engineering
+            <a
+              href="https://github.com/IBM/openapi-to-graphql"
+              style={{ textDecoration: 'underline' }}>
+              openapi-to-graphql
+            </a>
+            . I put together a quick POC and to my surprise it worked seamlessly. After engineering
             solutions to problems like keeping the generated schema updated with down-stream service
             changes the GraphQL gateway was in production.
           </p>

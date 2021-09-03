@@ -28,7 +28,7 @@ export const ContentContainer: any = styled.div({
   left: 0,
   right: 0,
   bottom: 0,
-  img: {
+  'img, div, video': {
     width: '100%',
     maxWidth: 'none',
   },

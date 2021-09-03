@@ -1,3 +1,4 @@
+export * from './thriver';
 export * from './walmart';
 export * from './themeable-design-systems';
 export * from './nui';
