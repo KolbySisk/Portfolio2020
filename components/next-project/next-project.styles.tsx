@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { spaced, Color, TitleFont } from '../../styles';
+import { spaced, Color, TitleFont, MediaQuery, BreakPoint } from '../../styles';
 import { motion } from 'framer-motion';
 
 export const Link: any = styled(motion.a)((props: any) => {
@@ -18,6 +18,10 @@ export const Link: any = styled(motion.a)((props: any) => {
       letterSpacing: '1px',
       backgroundImage: `url(${bgImage})`,
       fontSize: 32,
+      width: '75%',
     },
+    MediaQuery(BreakPoint.medium, {
+      width: '100%',
+    }),
   ];
 });

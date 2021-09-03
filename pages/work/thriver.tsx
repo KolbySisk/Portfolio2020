@@ -258,11 +258,9 @@ export default () => {
         </p>
       </Animator>
 
-      <DoubleColumn>
+      <DoubleColumn reverse={true}>
+        <NextProject work={nextWork} />
         <AllProjects />
-        <div style={{ width: '75%' }}>
-          <NextProject work={nextWork} />
-        </div>
       </DoubleColumn>
       <Footer />
 
