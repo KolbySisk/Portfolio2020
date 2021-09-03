@@ -11,7 +11,7 @@ import { useTitle } from '../../hooks/use-title';
 
 export default () => {
   const { work, nextWork } = useWork('design-systems-in-2020');
-  useTitle(`Kolby Sisk - ${work?.title}`);
+  useTitle(work?.title);
 
   return (
     <>

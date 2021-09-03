@@ -13,7 +13,7 @@ import { useWork } from '../../hooks/use-work';
 
 export default () => {
   const { work, nextWork } = useWork('corkcicle');
-  useTitle(`Kolby Sisk - ${work?.title}`);
+  useTitle(work?.title);
 
   return (
     <>

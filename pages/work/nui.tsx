@@ -12,7 +12,7 @@ import { useTitle } from '../../hooks/use-title';
 
 export default () => {
   const { work, nextWork } = useWork('nui');
-  useTitle(`Kolby Sisk - ${work?.title}`);
+  useTitle(work?.title);
 
   return (
     <>
