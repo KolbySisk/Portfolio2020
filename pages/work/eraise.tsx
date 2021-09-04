@@ -205,9 +205,9 @@ export default () => {
               While Eraise is a small app with a small scope, it required a complex infrastructure.
               One of the big concerns was security. I researched and used the most secure
               technologies for the given problems. Google's Firebase was used for authentication.
-              Stripe was used for payments. Stripe's Plaid was used for authenticating with the
-              banks and returning loan information. GitHub was used for the code repository and
-              Heroku for hosting. Overall I love the infrastructure that I came up with for Eraise.
+              Stripe was used for payments. Plaid was used for authenticating with the banks and
+              returning loan information. GitHub was used for the code repository and Heroku for
+              hosting. Overall I love the infrastructure that I came up with for Eraise.
             </p>
           </FontColor>
         </Animator>
