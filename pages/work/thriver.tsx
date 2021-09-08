@@ -119,7 +119,7 @@ export default () => {
         </Animator>
         <Animator containerType={ContainerType.ImageSquare}>
           <ReactPlayer
-            url="/images/work/thriver/flashcards.mp4"
+            url="/images/work/thriver/video.mp4"
             width="100%"
             height="100%"
             loop={true}
