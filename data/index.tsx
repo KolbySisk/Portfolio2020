@@ -14,7 +14,7 @@ const uniqueTags: string[] = Array.from(new Set([].concat(...work.map((w) => w.t
 
 const data: Data = {
   intro:
-    'Builder of software with a passion for learning. I specialize in application development and user experience design, however I enjoy the entire software development process. My favorite tech stack is currently TS Node & Next.js. I spend my days working with a talented team building next-gen pharmacy software at Walmart.',
+    'Builder of software with a passion for learning. I specialize in application development and user experience design, however I enjoy the entire software development process. My favorite tech stack is currently TS Node & Next.js. I spend my days solving ui-infrastructure problems at Udacity.',
   work: work,
   tags: uniqueTags,
   skills: AllSkills,
